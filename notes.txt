@@ -1,0 +1,5 @@
+Here a few notes while developing the ontology. Hope to keep this updated.
+
+THe ontology is about pharmaceutical product design and development - i.e how to formulate new pharmaceutical products ? From NCI thesaurus: a formulation is "The composition of a dosage form, including the characteristics of its raw materials and the operations required to process it". So the first step of the ontology is to define what are the different dosage forms , what are the different elements in the composition of a pharmaceutical product.
+
+A pharmaceutical product is a processed material that when administered in a patient can cure a disease. They are various type of pharmaceutical products: tablets, capsules, solutions, gels...they can be classified according to the form in chich the active and/or inert ingredient(s) are marketed for use (cf NCI thesaurus code C42636): ex: solid or liquid forms   

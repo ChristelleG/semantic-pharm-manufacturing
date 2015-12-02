@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY obo "http://purl.obolibrary.org/obo/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY chebi "http://purl.obolibrary.org/obo/chebi#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
+]>
+
+
+<rdf:RDF xmlns="http://ontofox.hegroup.org/u2tvibak.owl#"
+     xml:base="http://ontofox.hegroup.org/u2tvibak.owl"
+     xmlns:chebi="&obo;chebi#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/">
+    <owl:Ontology rdf:about="http://ontofox.hegroup.org/u2tvibak.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000115">
+        <rdfs:label rdf:datatype="&xsd;string">definition</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000412 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000412">
+        <rdfs:label xml:lang="en">imported from</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasAlternativeId -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasAlternativeId">
+        <rdfs:label rdf:datatype="&xsd;string">has_alternative_id</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasExactSynonym">
+        <rdfs:label rdf:datatype="&xsd;string">has_exact_synonym</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasOBONamespace -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasOBONamespace">
+        <rdfs:label rdf:datatype="&xsd;string">has_obo_namespace</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasRelatedSynonym">
+        <rdfs:label rdf:datatype="&xsd;string">has_related_synonym</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#id -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;id"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/chebi#BFO_0000051 -->
+
+    <owl:ObjectProperty rdf:about="&obo;chebi#BFO_0000051">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">has part</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_23367 -->
+
+    <owl:Class rdf:about="&obo;CHEBI_23367">
+        <rdfs:label rdf:datatype="&xsd;string">molecular entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;CHEBI_24431"/>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">.</oboInOwl:hasRelatedSynonym>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">CHEBI:23367</oboInOwl:id>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">chebi_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">entidad molecular</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">entidades moleculares</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">entite moleculaire</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">molecular entities</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">molecular entity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">molekulare Entitaet</oboInOwl:hasRelatedSynonym>
+        <obo:IAO_0000412 rdf:resource="&obo;chebi.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_24431 -->
+
+    <owl:Class rdf:about="&obo;CHEBI_24431">
+        <rdfs:label rdf:datatype="&xsd;string">chemical entity</rdfs:label>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">.</oboInOwl:hasRelatedSynonym>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A chemical entity is a physical entity of interest in chemistry including molecular entities, parts thereof, and chemical substances.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">CHEBI:24431</oboInOwl:id>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">chebi_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">chemical entity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">grouped_by_chemistry</oboInOwl:hasRelatedSynonym>
+        <obo:IAO_0000412 rdf:resource="&obo;chebi.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_24433 -->
+
+    <owl:Class rdf:about="&obo;CHEBI_24433">
+        <rdfs:label rdf:datatype="&xsd;string">group</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;CHEBI_24431"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;chebi#BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">.</oboInOwl:hasRelatedSynonym>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A defined linked collection of atoms or a single atom within a molecular entity.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">CHEBI:24433</oboInOwl:id>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">Gruppe</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">Rest</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">chebi_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">group</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">groupe</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">grupo</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">grupos</oboInOwl:hasRelatedSynonym>
+        <obo:IAO_0000412 rdf:resource="&obo;chebi.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_25367 -->
+
+    <owl:Class rdf:about="&obo;CHEBI_25367">
+        <rdfs:label rdf:datatype="&xsd;string">molecule</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;CHEBI_36357"/>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">.</oboInOwl:hasRelatedSynonym>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">Any polyatomic entity that is an electrically neutral entity consisting of more than one atom.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">CHEBI:25367</oboInOwl:id>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">Molekuel</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">chebi_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">molecula</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">molecule</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">molecules</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">neutral molecular compounds</oboInOwl:hasRelatedSynonym>
+        <obo:IAO_0000412 rdf:resource="&obo;chebi.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33250 -->
+
+    <owl:Class rdf:about="&obo;CHEBI_33250">
+        <rdfs:label rdf:datatype="&xsd;string">atom</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;CHEBI_24431"/>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">.</oboInOwl:hasRelatedSynonym>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A chemical entity constituting the smallest component of an element having the chemical properties of the element.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId rdf:datatype="&xsd;string">CHEBI:22671</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="&xsd;string">CHEBI:23907</oboInOwl:hasAlternativeId>
+        <oboInOwl:id rdf:datatype="&xsd;string">CHEBI:33250</oboInOwl:id>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">atom</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">atome</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">atomo</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">atoms</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">atomus</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">chebi_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">element</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">elements</oboInOwl:hasRelatedSynonym>
+        <obo:IAO_0000412 rdf:resource="&obo;chebi.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_36357 -->
+
+    <owl:Class rdf:about="&obo;CHEBI_36357">
+        <rdfs:label rdf:datatype="&xsd;string">polyatomic entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;chebi#BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_24433"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">.</oboInOwl:hasRelatedSynonym>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">Any molecular entity consisting of more than one atom.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">CHEBI:36357</oboInOwl:id>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">chebi_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">polyatomic entities</oboInOwl:hasRelatedSynonym>
+        <obo:IAO_0000412 rdf:resource="&obo;chebi.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_59999 -->
+
+    <owl:Class rdf:about="&obo;CHEBI_59999">
+        <rdfs:label rdf:datatype="&xsd;string">chemical substance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;CHEBI_24431"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A chemical substance is a portion of matter of constant composition, composed of molecular entities of the same type or of different types.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">CHEBI:59999</oboInOwl:id>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">Chemische Substanz</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">chebi_ontology</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000412 rdf:resource="&obo;chebi.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_60003 -->
+
+    <owl:Class rdf:about="&obo;CHEBI_60003">
+        <rdfs:label rdf:datatype="&xsd;string">pure substance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;CHEBI_59999"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A pure substance is a chemical substance composed of multiple molecules, which are all of the same kind.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">CHEBI:60003</oboInOwl:id>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">Reine Substanz</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">chebi_ontology</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000412 rdf:resource="&obo;chebi.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_60004 -->
+
+    <owl:Class rdf:about="&obo;CHEBI_60004">
+        <rdfs:label rdf:datatype="&xsd;string">mixture</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;CHEBI_59999"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A mixture is a chemical substance composed of multiple molecules, at least two of which are of a different kind.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">CHEBI:60004</oboInOwl:id>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">Mischung</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">chebi_ontology</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000412 rdf:resource="&obo;chebi.owl"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
