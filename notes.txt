@@ -1,5 +1,18 @@
 Here a few notes while developing the ontology. Hope to keep this updated.
 
+Imported from CHEBI: chemical entity(CHEBI_24431), atom (CHEBI_33250), chemical_substance (CHEBI_59999), mixture (CHEBI_60004), pure substance (CHEBI_60003), group (CHEBI_24433), molecular entity (CHEBI_23367), polyatomic entity (CHEBI_36357),molecule (CHEBI_25367), organic molecule (CHEBI_72695 )  
+
+
+
 THe ontology is about pharmaceutical product design and development - i.e how to formulate new pharmaceutical products ? From NCI thesaurus: a formulation is "The composition of a dosage form, including the characteristics of its raw materials and the operations required to process it". So the first step of the ontology is to define what are the different dosage forms , what are the different elements in the composition of a pharmaceutical product.
 
-A pharmaceutical product is a processed material that when administered in a patient can cure a disease. They are various type of pharmaceutical products: tablets, capsules, solutions, gels...they can be classified according to the form in chich the active and/or inert ingredient(s) are marketed for use (cf NCI thesaurus code C42636): ex: solid or liquid forms   
+"pharmaceutical dosage form": the form in which active and/or inert ingredient(s) are physically presented (code C42636 in NCI thesaurus). It is a processed material with a function that when administered in a patient it ameliorates a specific disorder (adapted from VO) . They are various type of pharmaceutical dosage form: tablets, capsules, solutions, gels...they can be classified according to the form in chich the active and/or inert ingredient(s) are marketed for: ex: solid or liquid forms. 
+A "pharmaceutical dosage form" is a processed material and is a chemical substance (CHEBI_59999)
+  
+Note: pharmaceutical products will refer to the actual marketed, branded, product (ex: Nurofen, Panadol etc... ) - this would be a subclass of the above but this is too granular for the OPHPDD ontology. 
+
+Imported from OBI: processed material (OBI_0000047), planned process (OBI_0000011), material processing (OBI_0000094)
+
+Created class hierarchy for pharmaceutical dosage form, inspired by NCI thesaurus. See difference between liquid and solution. 
+
+Could add class hierarchy for route of administration but not clear how this is relevant for the present ontology.  
