@@ -15,4 +15,10 @@ Imported from OBI: processed material (OBI_0000047), planned process (OBI_000001
 
 Created class hierarchy for pharmaceutical dosage form, inspired by NCI thesaurus. See difference between liquid and solution. 
 
-Could add class hierarchy for route of administration but not clear how this is relevant for the present ontology.  
+Could add class hierarchy for route of administration but not clear how this is relevant for the present ontology.
+
+A pharmaceutical dosage form is usually composed of one Active Pharmaceutical Ingredient and Excipients. Excipients have different role (filler, binder etc...).
+API and Excipients are part of pharmaceutical dosage form, they are processed material and also chemical substance (first I wanted to put them as pure substance but they might have impurities).
+Transformed class "pharmaceutical dosage form component" into equivalent class "processed material and part of some pharmaceutical dosage form".
+ 
+
