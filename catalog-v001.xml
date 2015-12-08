@@ -11,9 +11,10 @@
     <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/ro/releases/2015-10-29/ro.owl" uri="http://purl.obolibrary.org/obo/ro.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/bfo/2.0/bfo.owl" uri="http://purl.obolibrary.org/obo/bfo.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1449499000867" name="http://ontofox.hegroup.org/9tqfiqcv.owl" uri="ImportedTerms/CHEBI_ORganicMolecule.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1449499000867" name="http://ontofox.hegroup.org/u2tvibak.owl" uri="ImportedTerms/CHEBIImport.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1449499000867" name="http://purl.obolibrary.org/obo/obi.owl" uri="ImportedTerms/OBI_ProcessedMaterial3.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1449499000867" name="http://www.OPHPDD.com/ontologies/OPHPDD.owl" uri="OPHPDD.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1449587091304" name="http://ontofox.hegroup.org/9tqfiqcv.owl" uri="ImportedTerms/CHEBI_ORganicMolecule.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1449587091304" name="http://ontofox.hegroup.org/u2tvibak.owl" uri="ImportedTerms/CHEBIImport.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1449587091304" name="http://ontofox.hegroup.org/w4mn8bdf.owl" uri="ImportedTerms/partof.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1449587091304" name="http://purl.obolibrary.org/obo/obi.owl" uri="ImportedTerms/OBI_ProcessedMaterial3.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1449587091304" name="http://www.OPHPDD.com/ontologies/OPHPDD.owl" uri="OPHPDD.owl"/>
     </group>
 </catalog>
