@@ -671,6 +671,26 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/DRON_00000001 -->
+
+    <owl:Class rdf:about="&obo;DRON_00000001">
+        <rdfs:label>clinical drug role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000023"/>
+        <obo:IAO_0000115>the role of a material entity to prevent, diagnose, treat, or study disease and/or its effects</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DRON_00000030 -->
+
+    <owl:Class rdf:about="&obo;DRON_00000030">
+        <rdfs:label>role of scattered molecular aggregate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000023"/>
+        <obo:IAO_0000115>a role borne by a scattered molecular aggregate and realized by its grains participating in one or more processes</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBI_0000011 -->
 
     <owl:Class rdf:about="&obo;OBI_0000011">
@@ -765,6 +785,13 @@
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000001">
         <rdfs:label xml:lang="en">pharmaceutical dosage form</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
+                <owl:onClass rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000019"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;CHEBI_59999"/>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000047"/>
         <obo:IAO_0000119>NCI Thesaurus: C42636</obo:IAO_0000119>
@@ -1085,6 +1112,9 @@ It is a processed material with a function that when administered in a patient i
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000028">
         <rdfs:label xml:lang="en">essential minor component of pharmaceutical excipient</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
+        <obo:IAO_0000115>Any material present in a pharmaceutical excipient that is not the main chemical component or components, and is necessary for the excipient&apos;s proper performance during use.</obo:IAO_0000115>
+        <rdfs:seeAlso>NCI Thesaurus: C42665</rdfs:seeAlso>
+        <obo:IAO_0000119>NCI Thesaurus: C42665</obo:IAO_0000119>
     </owl:Class>
     
 
@@ -1094,6 +1124,9 @@ It is a processed material with a function that when administered in a patient i
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000029">
         <rdfs:label xml:lang="en">filler excipient</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
+        <obo:IAO_0000115>A therapeutically inactive ingredient of a solid pharmaceutical dosage form that is used to increase the volume of the material to accommodate easier processing of the drug and to make it a suitable size for patient consumption</obo:IAO_0000115>
+        <obo:IAO_0000119>NCI Thesaurus: C42650</obo:IAO_0000119>
+        <rdfs:seeAlso>NCI Thesaurus: C42650</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -1103,6 +1136,9 @@ It is a processed material with a function that when administered in a patient i
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000030">
         <rdfs:label xml:lang="en">flavor excipient</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
+        <obo:IAO_0000119>NCI Thesaurus: C42664</obo:IAO_0000119>
+        <rdfs:seeAlso>NCI Thesaurus: C42664</rdfs:seeAlso>
+        <obo:IAO_0000115>Therapeutically inactive natural or synthetic ingredient(s) of pharmaceutical dosage form used to improve drug palatability. Flavors are often complex mixtures of compounds and often fall under the rubric of trade secrets, being unspecified on labels. Such nondisclosure can cause difficulties in identifying flavor-related adverse events, e.g. allergic reactions from common allergens such as menthol, lemon oil, or peppermint oil</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1121,6 +1157,9 @@ It is a processed material with a function that when administered in a patient i
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000032">
         <rdfs:label xml:lang="en">lubricant excipient</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
+        <obo:IAO_0000115>Lubricant excipient is a therapeutically inactive substance used to facilitate the release of stamped solid pharmaceutical dosage forms, e.g. tablets, out of the die once pressed, improving the efficiency of manufacturing.</obo:IAO_0000115>
+        <obo:IAO_0000119>NCI Thesaurus:  C42653</obo:IAO_0000119>
+        <rdfs:seeAlso>NCI Thesaurus:  C42653</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -1130,6 +1169,9 @@ It is a processed material with a function that when administered in a patient i
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000033">
         <rdfs:label xml:lang="en">preservative excipient</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
+        <rdfs:seeAlso>NCI Thesaurus: C42659</rdfs:seeAlso>
+        <obo:IAO_0000119>NCI Thesaurus: C42659</obo:IAO_0000119>
+        <obo:IAO_0000115>Chemicals that are added to drug products to prolong shelf life and maintain sterility. Protection of formulations, especially aqueous solutions, against microbial growth requires use of either antibacterial or antifungal preservatives. Generally, such agents are active against either bacteria or fungi but a few are active against both. The antimicrobials include but not limited to chlorobutanol, benzyl alcohol, sodium benzoate, sorbic acid, and phenol. The antioxidizing agents include butylated hydroxytolune, hydroxyanisole, propyl gallate, and sulfites. The necessary addition of preservatives for both safety and economy sometimes has been associated with significant adverse effects in certain patient populations.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1148,6 +1190,9 @@ It is a processed material with a function that when administered in a patient i
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000035">
         <rdfs:label xml:lang="en">surfactant excipient</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
+        <obo:IAO_0000115>A surface active agent (surfactant), in dilute solution, moves to the interface of a two-phase system and reduces the surface free energy. This permits the two phases to mix more completely. Surface active agents are usually soluble both in aqueous and non-aqueous solvents. They are exemplified by soap-type molecules (long chain fatty acid salts) such as sodium lauryl sulfate.</obo:IAO_0000115>
+        <rdfs:seeAlso>NCI Thesaurus: C42739</rdfs:seeAlso>
+        <obo:IAO_0000119>NCI Thesaurus: C42739</obo:IAO_0000119>
     </owl:Class>
     
 
@@ -1157,6 +1202,9 @@ It is a processed material with a function that when administered in a patient i
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000036">
         <rdfs:label xml:lang="en">suspending excipient</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
+        <rdfs:seeAlso>NCI Thesaurus: C42660</rdfs:seeAlso>
+        <obo:IAO_0000119>NCI Thesaurus: C42660</obo:IAO_0000119>
+        <obo:IAO_0000115>Therapeutically inactive ingredient of pharmaceutical dosage form used to prevent aggregation of the active drug in liquid form, allowing uniform concentrations to be maintained for accurate dosing</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1166,6 +1214,9 @@ It is a processed material with a function that when administered in a patient i
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000037">
         <rdfs:label xml:lang="en">sweetener excipient</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
+        <obo:IAO_0000115>Therapeutically inactive ingredient of pharmaceutical dosage form used to improve taste of a drug</obo:IAO_0000115>
+        <rdfs:seeAlso>NCI Thesaurus: C42658</rdfs:seeAlso>
+        <obo:IAO_0000119>NCI Thesaurus: C42658</obo:IAO_0000119>
     </owl:Class>
     
 
@@ -1193,6 +1244,30 @@ It is a processed material with a function that when administered in a patient i
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000042">
         <rdfs:label xml:lang="en">enteric coating</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000022"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000045 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000045">
+        <rdfs:label xml:lang="en">active ingredient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;DRON_00000030"/>
+        <oboInOwl:hasExactSynonym>DRON:00000028</oboInOwl:hasExactSynonym>
+        <obo:IAO_0000119>DRON:00000028</obo:IAO_0000119>
+        <obo:IAO_0000115>a role of a scattered molecular aggregate that is part of a pharmaceutical dosage form that is realized by (1) administration of the drug to an organism followed by (2) some change in the structure or functioning of some part of the organism</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046">
+        <rdfs:label xml:lang="en">excipient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;DRON_00000030"/>
+        <obo:IAO_0000119>Define by C.Gendrin with Inspiration from DRON and NCI Thesaurus</obo:IAO_0000119>
+        <obo:IAO_0000115>a role of a scattered molecular aggregate that is part of a pharmaceutical dosage form that is realized by facilitating administration or manufacture, improving product delivery, promoting the consistent release and bioavailability of the drug, enhancing stability, assisting in product identification, or enhancing other product characteristics</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>DRON:00000029</oboInOwl:hasExactSynonym>
     </owl:Class>
     
 
