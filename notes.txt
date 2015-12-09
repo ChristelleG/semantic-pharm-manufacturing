@@ -6,20 +6,21 @@ Imported from CHEBI: chemical entity(CHEBI_24431), atom (CHEBI_33250), chemical_
 
 THe ontology is about pharmaceutical product design and development - i.e how to formulate new pharmaceutical products ? From NCI thesaurus: a formulation is "The composition of a dosage form, including the characteristics of its raw materials and the operations required to process it". So the first step of the ontology is to define what are the different dosage forms , what are the different elements in the composition of a pharmaceutical product.
 
-"pharmaceutical dosage form": the form in which active and/or inert ingredient(s) are physically presented (code C42636 in NCI thesaurus). It is a processed material with a function that when administered in a patient it ameliorates a specific disorder (adapted from VO) . They are various type of pharmaceutical dosage form: tablets, capsules, solutions, gels...they can be classified according to the form in chich the active and/or inert ingredient(s) are marketed for: ex: solid or liquid forms. 
-A "pharmaceutical dosage form" is a processed material and is a chemical substance (CHEBI_59999)
+"pharmaceutical dosage form": the form in which active and/or inert ingredient(s) are physically presented (code C42636 in NCI thesaurus). It is a processed material with a clinical drug role (cf DRON_00000001) and has at least one ingrediet/component (pharmaceutical dosage form ingredient) with an active role (active ingredient role) and some ingredient with excipient role . They are various type of pharmaceutical dosage form: tablets, capsules, solutions, gels...they can be classified according to the form in chich the active and/or inert ingredient(s) are marketed for: ex: solid or liquid forms. 
+A "pharmaceutical dosage form" is a subclass of processed material, and is equivalent to (has part min 1 active pharmaceutical ingredient) and (has part some pharmaceutical excipient) and (has role some clinical drug role). 
   
-Note: pharmaceutical products will refer to the actual marketed, branded, product (ex: Nurofen, Panadol etc... ) - this would be a subclass of the above but this is too granular for the OPHPDD ontology. 
+Note: Pharmaceutical dosage form si equivalent to "Drug product" used by DRON. In OPHPDD we do not consider the actual marketed, branded, product (ex: Nurofen, Panadol etc... ) - this would be a subclass of the above but this is too granular for the OPHPDD ontology and is considered in DRON. 
 
 Imported from OBI: processed material (OBI_0000047), planned process (OBI_0000011), material processing (OBI_0000094)
 
+Imported from DRON clinical drug role(DRON:00000001), role of scattered molecular aggregate (DRON 00000030), active ingredient (DRON:00000028 renamed active ingredient role), excipient (DRON:00000029 renamed excipient role)
+
 Created class hierarchy for pharmaceutical dosage form, inspired by NCI thesaurus. See difference between liquid and solution. 
+
+Created class hierarchy for different kind of excipient: binders, fillers, coatings etc...according to NCI Thesaurus
 
 Could add class hierarchy for route of administration but not clear how this is relevant for the present ontology.
 
-A pharmaceutical dosage form is usually composed of one Active Pharmaceutical Ingredient and Excipients. Excipients have different role (filler, binder etc...included NCI thesaurus definitions: cf NCI Thesaurus C42637 and subclasses).
-API and Excipients are part of pharmaceutical dosage form, they are processed material and also chemical substance (not necessarily pure: cf coatings).
-need to link to CHEBI entity (ex cellulose, microcristalline cellullose, starch...)
-Transformed class "pharmaceutical dosage form component" into equivalent class "processed material and part of some pharmaceutical dosage form".
- 
+ See http://drugtopics.modernmedicine.com/drug-topics/news/modernmedicine/modern-medicine-news/overview-pharmaceutical-excipients-used-tablets for excipients list and their roles. Linking some of CHEBI entity to excipients components: tentative link: ex microscristalling cellulose excipient (the actual powder mixed with other tablets ingredients) is a scattered molecular aggregate and has grain molecular entity cellulose (CHEBI:62968) - I am waiting confirmation from CHEBI guys (gowen@ebi.ac.uk and egon.willighagen@gmail.com).
+
 

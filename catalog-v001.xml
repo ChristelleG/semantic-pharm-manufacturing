@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <uri id="Imports Wizard Entry" name="http://ontofox.hegroup.org/w4mn8bdf.owl" uri="ImportedTerms/partof.owl"/>
-    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/obi.owl" uri="ImportedTerms/OBI_ProcessedMaterial3.owl"/>
-    <uri id="Imports Wizard Entry" name="http://ontofox.hegroup.org/7v5ksdtm.owl" uri="ImportedTerms/OBI_ProcessedMaterial2.owl"/>
-    <uri id="Imports Wizard Entry" name="http://ontofox.hegroup.org/cyjhn490.owl" uri="ImportedTerms/OBI_ProcessedMaterial.owl"/>
-    <uri id="Imports Wizard Entry" name="http://ontofox.hegroup.org/u2tvibak.owl" uri="ImportedTerms/CHEBIImport.owl"/>
-    <uri id="Imports Wizard Entry" name="http://ontofox.hegroup.org/9tqfiqcv.owl" uri="ImportedTerms/CHEBI_ORganicMolecule.owl"/>
-    <uri id="Imports Wizard Entry" name="http://ontofox.hegroup.org/9tqfiqcv.owl" uri="file:/home/christelle/Documents/ADDOPT/addopt/Ontology/CHEBI_ORganicMolecule.owl"/>
-    <uri id="Imports Wizard Entry" name="http://ontofox.hegroup.org/u2tvibak.owl" uri="file:/home/christelle/Documents/ADDOPT/addopt/Ontology/CHEBIImport.owl"/>
+    <uri id="Imports Wizard Entry" name="http://ontofox.hegroup.org/v4wq6gop.owl" uri="ImportedTerms/RO_bearerof.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/ro/releases/2015-10-29/ro.owl" uri="http://purl.obolibrary.org/obo/ro.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/bfo/2.0/bfo.owl" uri="http://purl.obolibrary.org/obo/bfo.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
