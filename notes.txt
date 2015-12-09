@@ -21,6 +21,6 @@ Created class hierarchy for different kind of excipient: binders, fillers, coati
 
 Could add class hierarchy for route of administration but not clear how this is relevant for the present ontology.
 
- See http://drugtopics.modernmedicine.com/drug-topics/news/modernmedicine/modern-medicine-news/overview-pharmaceutical-excipients-used-tablets for excipients list and their roles. Linking some of CHEBI entity to excipients components: tentative link: ex microscristalling cellulose excipient (the actual powder mixed with other tablets ingredients) is a scattered molecular aggregate and has grain molecular entity cellulose (CHEBI:62968) - I am waiting confirmation from CHEBI guys (gowen@ebi.ac.uk and egon.willighagen@gmail.com).
+ See http://drugtopics.modernmedicine.com/drug-topics/news/modernmedicine/modern-medicine-news/overview-pharmaceutical-excipients-used-tablets for excipients list and their roles. Linking some of CHEBI entity to excipients components: tentative link: ex microscristalling cellulose excipient (the actual powder mixed with other tablets ingredients) is a scattered molecular aggregate with has grain molecular entity cellulose (CHEBI:62968) - this should works. 
 
 

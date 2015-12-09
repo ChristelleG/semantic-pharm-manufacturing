@@ -1127,7 +1127,6 @@ It is a processed material with a function that when administered in a patient i
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&obo;CHEBI_59999"/>
         <obo:IAO_0000115>A processed material that is part of a pharmaceutical dosage form</obo:IAO_0000115>
     </owl:Class>
     
