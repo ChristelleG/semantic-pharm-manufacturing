@@ -747,6 +747,17 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_62968 -->
+
+    <owl:Class rdf:about="&obo;CHEBI_62968">
+        <rdfs:label>crystalline cellulose</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;CHEBI_23367"/>
+        <obo:IAO_0000119>CHEBI:62968</obo:IAO_0000119>
+        <obo:IAO_0000115>A (1-&gt;4)-beta-D-glucan (cellulose) in crystalline form with a structure consisting of several hundred to over ten thousand D-glucose residues joined by beta(1-&gt;4) glycosidic linkages</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_72695 -->
 
     <owl:Class rdf:about="&obo;CHEBI_72695">
@@ -833,12 +844,6 @@
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
-                <owl:someValuesFrom rdf:resource="&obo;BFO_0000040"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
                 <owl:allValuesFrom rdf:resource="&obo;BFO_0000040"/>
             </owl:Restriction>
@@ -847,6 +852,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
                 <owl:someValuesFrom rdf:resource="&obo;OBI_0000047"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="&obo;BFO_0000040"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -909,7 +920,7 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                        <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
+                        <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000019"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;RO_0000087"/>
@@ -917,8 +928,14 @@
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                        <owl:onClass rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000019"/>
-                        <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000019"/>
+                                    <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -927,7 +944,7 @@
         <obo:IAO_0000119>NCI Thesaurus: C42636</obo:IAO_0000119>
         <rdfs:seeAlso>NCI Thesaurus: C42636</rdfs:seeAlso>
         <obo:IAO_0000115>From NCI thesaurus: the form in which active and/or inert ingredient(s) are physically presented (code C42636 in NCI thesaurus).
-It is a processed material with a function that when administered in a patient it ameliorates a specific disorder (adapted from VO)</obo:IAO_0000115>
+It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1157,206 +1174,10 @@ It is a processed material with a function that when administered in a patient i
     
 
 
-    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000021 -->
-
-    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000021">
-        <rdfs:label xml:lang="en">binder excipient</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
-        <obo:IAO_0000119>NCI Thesaurus: C42647</obo:IAO_0000119>
-        <rdfs:seeAlso>NCI Thesaurus: C42647</rdfs:seeAlso>
-        <obo:IAO_0000115>An inactive ingredient of the solid pharmaceutical dosage form added to cement the active and inert components of tablets together to maintain cohesive and discrete portions.</obo:IAO_0000115>
-    </owl:Class>
-    
-
-
-    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000022 -->
-
-    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000022">
-        <rdfs:label xml:lang="en">coating excipient</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
-        <obo:IAO_0000115>Therapeutically inactive ingredient of pharmaceutical dosage form used to protect it against premature physical breakup and to prevent unwanted environmental interactions. Coating can mask bad taste and allow pills to be swallowed easily</obo:IAO_0000115>
-        <obo:IAO_0000119>NCI Thesaurus: C42663</obo:IAO_0000119>
-        <rdfs:seeAlso>NCI Thesaurus: C42663</rdfs:seeAlso>
-    </owl:Class>
-    
-
-
-    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000023 -->
-
-    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000023">
-        <rdfs:label xml:lang="en">color excipient</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
-        <obo:IAO_0000115>Therapeutically inactive dye or coloring agent that is a component of pharmaceutical product. There are the more than 100 excipient colors approved by the FDA for pharmaceutical use.</obo:IAO_0000115>
-        <obo:IAO_0000119>NCI Thesaurus: C42656</obo:IAO_0000119>
-        <rdfs:seeAlso>NCI Thesaurus: C42656</rdfs:seeAlso>
-    </owl:Class>
-    
-
-
-    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000024 -->
-
-    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000024">
-        <rdfs:label xml:lang="en">compression aid excipient</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
-        <obo:IAO_0000119>NCI Thesaurus: C42655</obo:IAO_0000119>
-        <rdfs:seeAlso>NCI Thesaurus: C42655</rdfs:seeAlso>
-        <obo:IAO_0000115>Therapeutically inactive substance that helps to make pills hold their shape upon compression and improve compressibility properties in general.</obo:IAO_0000115>
-    </owl:Class>
-    
-
-
-    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000025 -->
-
-    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000025">
-        <rdfs:label xml:lang="en">diluent excipient</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
-        <obo:IAO_0000119>NCI Thesaurus: C42652</obo:IAO_0000119>
-        <rdfs:seeAlso>NCI Thesaurus: C42652</rdfs:seeAlso>
-        <obo:IAO_0000115>A therapeutically inactive ingredient of a fluid pharmaceutical dosage form that is used to increase the volume of the material to accommodate easier processing of the drug (especially accurate dilutions) and to make it a suitable size for patient consumption.</obo:IAO_0000115>
-    </owl:Class>
-    
-
-
-    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000026 -->
-
-    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000026">
-        <rdfs:label xml:lang="en">disintegrant excipient</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
-        <obo:IAO_0000115>Disintegrant excipient is a therapeutically inactive ingredient of a solid pharmaceutical dosage form that helps the form to dissolve within the gastrointestinal tract to ensure full release of the pharmaceutically active material.</obo:IAO_0000115>
-        <obo:IAO_0000119>NCI Thesaurus: C42648</obo:IAO_0000119>
-        <rdfs:seeAlso>NCI Thesaurus: C42648</rdfs:seeAlso>
-    </owl:Class>
-    
-
-
-    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000027 -->
-
-    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000027">
-        <rdfs:label xml:lang="en">dispersing excipient</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000028 -->
-
-    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000028">
-        <rdfs:label xml:lang="en">essential minor component of pharmaceutical excipient</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
-        <obo:IAO_0000115>Any material present in a pharmaceutical excipient that is not the main chemical component or components, and is necessary for the excipient&apos;s proper performance during use.</obo:IAO_0000115>
-        <rdfs:seeAlso>NCI Thesaurus: C42665</rdfs:seeAlso>
-        <obo:IAO_0000119>NCI Thesaurus: C42665</obo:IAO_0000119>
-    </owl:Class>
-    
-
-
-    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000029 -->
-
-    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000029">
-        <rdfs:label xml:lang="en">filler excipient</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
-        <obo:IAO_0000115>A therapeutically inactive ingredient of a solid pharmaceutical dosage form that is used to increase the volume of the material to accommodate easier processing of the drug and to make it a suitable size for patient consumption</obo:IAO_0000115>
-        <obo:IAO_0000119>NCI Thesaurus: C42650</obo:IAO_0000119>
-        <rdfs:seeAlso>NCI Thesaurus: C42650</rdfs:seeAlso>
-    </owl:Class>
-    
-
-
-    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000030 -->
-
-    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000030">
-        <rdfs:label xml:lang="en">flavor excipient</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
-        <obo:IAO_0000119>NCI Thesaurus: C42664</obo:IAO_0000119>
-        <rdfs:seeAlso>NCI Thesaurus: C42664</rdfs:seeAlso>
-        <obo:IAO_0000115>Therapeutically inactive natural or synthetic ingredient(s) of pharmaceutical dosage form used to improve drug palatability. Flavors are often complex mixtures of compounds and often fall under the rubric of trade secrets, being unspecified on labels. Such nondisclosure can cause difficulties in identifying flavor-related adverse events, e.g. allergic reactions from common allergens such as menthol, lemon oil, or peppermint oil</obo:IAO_0000115>
-    </owl:Class>
-    
-
-
-    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000031 -->
-
-    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000031">
-        <rdfs:label xml:lang="en">glidant excipient</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000032 -->
-
-    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000032">
-        <rdfs:label xml:lang="en">lubricant excipient</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
-        <obo:IAO_0000115>Lubricant excipient is a therapeutically inactive substance used to facilitate the release of stamped solid pharmaceutical dosage forms, e.g. tablets, out of the die once pressed, improving the efficiency of manufacturing.</obo:IAO_0000115>
-        <obo:IAO_0000119>NCI Thesaurus:  C42653</obo:IAO_0000119>
-        <rdfs:seeAlso>NCI Thesaurus:  C42653</rdfs:seeAlso>
-    </owl:Class>
-    
-
-
-    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000033 -->
-
-    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000033">
-        <rdfs:label xml:lang="en">preservative excipient</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
-        <rdfs:seeAlso>NCI Thesaurus: C42659</rdfs:seeAlso>
-        <obo:IAO_0000119>NCI Thesaurus: C42659</obo:IAO_0000119>
-        <obo:IAO_0000115>Chemicals that are added to drug products to prolong shelf life and maintain sterility. Protection of formulations, especially aqueous solutions, against microbial growth requires use of either antibacterial or antifungal preservatives. Generally, such agents are active against either bacteria or fungi but a few are active against both. The antimicrobials include but not limited to chlorobutanol, benzyl alcohol, sodium benzoate, sorbic acid, and phenol. The antioxidizing agents include butylated hydroxytolune, hydroxyanisole, propyl gallate, and sulfites. The necessary addition of preservatives for both safety and economy sometimes has been associated with significant adverse effects in certain patient populations.</obo:IAO_0000115>
-    </owl:Class>
-    
-
-
-    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000034 -->
-
-    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000034">
-        <rdfs:label xml:lang="en">printing ink excipient</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000035 -->
-
-    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000035">
-        <rdfs:label xml:lang="en">surfactant excipient</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
-        <obo:IAO_0000115>A surface active agent (surfactant), in dilute solution, moves to the interface of a two-phase system and reduces the surface free energy. This permits the two phases to mix more completely. Surface active agents are usually soluble both in aqueous and non-aqueous solvents. They are exemplified by soap-type molecules (long chain fatty acid salts) such as sodium lauryl sulfate.</obo:IAO_0000115>
-        <rdfs:seeAlso>NCI Thesaurus: C42739</rdfs:seeAlso>
-        <obo:IAO_0000119>NCI Thesaurus: C42739</obo:IAO_0000119>
-    </owl:Class>
-    
-
-
-    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000036 -->
-
-    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000036">
-        <rdfs:label xml:lang="en">suspending excipient</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
-        <rdfs:seeAlso>NCI Thesaurus: C42660</rdfs:seeAlso>
-        <obo:IAO_0000119>NCI Thesaurus: C42660</obo:IAO_0000119>
-        <obo:IAO_0000115>Therapeutically inactive ingredient of pharmaceutical dosage form used to prevent aggregation of the active drug in liquid form, allowing uniform concentrations to be maintained for accurate dosing</obo:IAO_0000115>
-    </owl:Class>
-    
-
-
-    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000037 -->
-
-    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000037">
-        <rdfs:label xml:lang="en">sweetener excipient</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
-        <obo:IAO_0000115>Therapeutically inactive ingredient of pharmaceutical dosage form used to improve taste of a drug</obo:IAO_0000115>
-        <rdfs:seeAlso>NCI Thesaurus: C42658</rdfs:seeAlso>
-        <obo:IAO_0000119>NCI Thesaurus: C42658</obo:IAO_0000119>
-    </owl:Class>
-    
-
-
     <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000040 -->
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000040">
         <rdfs:label xml:lang="en">thin film coating</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000022"/>
     </owl:Class>
     
 
@@ -1365,7 +1186,6 @@ It is a processed material with a function that when administered in a patient i
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000041">
         <rdfs:label xml:lang="en">sugar coating</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000022"/>
     </owl:Class>
     
 
@@ -1374,7 +1194,6 @@ It is a processed material with a function that when administered in a patient i
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000042">
         <rdfs:label xml:lang="en">enteric coating</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000022"/>
     </owl:Class>
     
 
@@ -1399,6 +1218,259 @@ It is a processed material with a function that when administered in a patient i
         <obo:IAO_0000119>Define by C.Gendrin with Inspiration from DRON and NCI Thesaurus</obo:IAO_0000119>
         <obo:IAO_0000115>a role of a scattered molecular aggregate that is part of a pharmaceutical dosage form that is realized by facilitating administration or manufacture, improving product delivery, promoting the consistent release and bioavailability of the drug, enhancing stability, assisting in product identification, or enhancing other product characteristics</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>DRON:00000029</oboInOwl:hasExactSynonym>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000047 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000047">
+        <rdfs:label xml:lang="en">microcrystalline cellulose excipient</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;RO_0000087"/>
+                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000058"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
+                <owl:allValuesFrom rdf:resource="&obo;CHEBI_62968"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_62968"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000048 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000048">
+        <rdfs:label xml:lang="en">lubricant excipient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000049 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000049">
+        <rdfs:label xml:lang="en">glidant excipient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000048"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000050 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000050">
+        <rdfs:label xml:lang="en">anti-adherent excipient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000048"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000051 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000051">
+        <rdfs:label xml:lang="en">anti-friction excipient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000048"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000052 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000052">
+        <rdfs:label xml:lang="en">coating excipient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000053 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000053">
+        <rdfs:label xml:lang="en">protective coating excipient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000052"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000054 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000054">
+        <rdfs:label xml:lang="en">enteric coating excipient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000053"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000055 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000055">
+        <rdfs:label xml:lang="en">administration coating excipient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000052"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000056 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000056">
+        <rdfs:label xml:lang="en">flavor coating excipient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000055"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000057 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000057">
+        <rdfs:label xml:lang="en">lubricant coating excipient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000055"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000058 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000058">
+        <rdfs:label xml:lang="en">binding excipient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000059 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000059">
+        <rdfs:label xml:lang="en">flavor excipient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000060 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000060">
+        <rdfs:label xml:lang="en">sorbent excipient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000061 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000061">
+        <rdfs:label xml:lang="en">preservative excipient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000062 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000062">
+        <rdfs:label xml:lang="en">disintegrant excipient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000063 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000063">
+        <rdfs:label xml:lang="en">vehicle excipient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000064 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000064">
+        <rdfs:label xml:lang="en">color excipient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000065 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000065">
+        <rdfs:label xml:lang="en">compression aid excipient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046"/>
+        <obo:IAO_0000119>C. Gendrin, Inspired by NCI Thesaurus: C42655</obo:IAO_0000119>
+        <obo:IAO_0000115>an excipient role that is realised by its bearer helping to make pills hold their shape upon compression and improving compressibility properties in general.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000066 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000066">
+        <rdfs:label xml:lang="en">diluent excipient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046"/>
+        <obo:IAO_0000115>An excipient role that is realized by its bearer increasing the volume of the material to accommodate easier processing of the drug (especially accurate dilutions) and making it a suitable size for patient consumption.</obo:IAO_0000115>
+        <obo:IAO_0000119>C. Gendrin inspired by NCI Thesaurus: C42652</obo:IAO_0000119>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000067 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000067">
+        <rdfs:label xml:lang="en">dispersing excipient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000068 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000068">
+        <rdfs:label xml:lang="en">filler excipient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046"/>
+        <obo:IAO_0000115>An excipient role that is realized by its bearer increasing the volume of the material to accommodate easier processing of the drug and making it a suitable size for patient consumption</obo:IAO_0000115>
+        <obo:IAO_0000119>C. Gendrin, inspired by NCI Thesaurus: C42650</obo:IAO_0000119>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000069 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000069">
+        <rdfs:label xml:lang="en">printing ink excipient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000070 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000070">
+        <rdfs:label xml:lang="en">surfactant excipient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046"/>
+        <obo:IAO_0000115>A surface active agent (surfactant), in dilute solution, moves to the interface of a two-phase system and reduces the surface free energy. This permits the two phases to mix more completely. Surface active agents are usually soluble both in aqueous and non-aqueous solvents. They are exemplified by soap-type molecules (long chain fatty acid salts) such as sodium lauryl sulfate.</obo:IAO_0000115>
+        <obo:IAO_0000119>NCI Thesaurus: C42739</obo:IAO_0000119>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000071 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000071">
+        <rdfs:label xml:lang="en">suspending excipient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046"/>
+        <obo:IAO_0000115>An excipient role that is realized by its bearer preventing aggregation of the active drug in liquid form, allowing uniform concentrations to be maintained for accurate dosing</obo:IAO_0000115>
+        <obo:IAO_0000119>C. Gendrin inspired by NCI Thesaurus: C42660</obo:IAO_0000119>
     </owl:Class>
     
 
