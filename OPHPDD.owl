@@ -510,6 +510,16 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label>has exact match</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1174,30 +1184,6 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     
 
 
-    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000040 -->
-
-    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000040">
-        <rdfs:label xml:lang="en">thin film coating</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000041 -->
-
-    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000041">
-        <rdfs:label xml:lang="en">sugar coating</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000042 -->
-
-    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000042">
-        <rdfs:label xml:lang="en">enteric coating</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000045 -->
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000045">
@@ -1254,6 +1240,8 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000048">
         <rdfs:label xml:lang="en">lubricant excipient role</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046"/>
+        <obo:IAO_0000115>An excipient role that is realized by a process of drug administration or a process of drug manufacturing and results in decreased 1) adhesion between drug ingredients and manufacturing equipment or  between drug ingredients and some part of an organism; or 2) friction between drug ingredients and manufacturing equipment or between drug ingredients and some part of an organism; or 3) cohesion between particles within the drug preparation.</obo:IAO_0000115>
+        <obo:IAO_0000119>DRON</obo:IAO_0000119>
     </owl:Class>
     
 
@@ -1263,6 +1251,8 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000049">
         <rdfs:label xml:lang="en">glidant excipient role</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000048"/>
+        <obo:IAO_0000115>A lubricant excipient role that is realized by a process of drug administration or a process of drug manufacturing and results in decreased cohesion or friction between particles within a drug preparation.</obo:IAO_0000115>
+        <obo:IAO_0000119>DRON</obo:IAO_0000119>
     </owl:Class>
     
 
@@ -1272,6 +1262,8 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000050">
         <rdfs:label xml:lang="en">anti-adherent excipient role</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000048"/>
+        <obo:IAO_0000119>DRON</obo:IAO_0000119>
+        <obo:IAO_0000115>A lubricant excipient role that is realized by a process of drug administration or a process of drug manufacturing and results in decreased adhesion between drug ingredients and manufacturing equipment or between drug ingredients and some part of an organism</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1281,6 +1273,8 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000051">
         <rdfs:label xml:lang="en">anti-friction excipient role</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000048"/>
+        <obo:IAO_0000119>DRON</obo:IAO_0000119>
+        <obo:IAO_0000115>A lubricant excipient that is realized by a process of drug administration or a process of drug manufacturing and results in decreased friction between drug ingredients and manufacturing equipment or between drug ingredients and some part of an organism.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1290,6 +1284,8 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000052">
         <rdfs:label xml:lang="en">coating excipient role</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046"/>
+        <obo:IAO_0000115>An excipient role borne by an aggregate of molecules on the surface of a solid drug product that is realized by a process of preventing interaction between entities outside the drug product and the other ingredients in the drug product</obo:IAO_0000115>
+        <obo:IAO_0000119>DRON</obo:IAO_0000119>
     </owl:Class>
     
 
@@ -1299,6 +1295,8 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000053">
         <rdfs:label xml:lang="en">protective coating excipient role</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000052"/>
+        <obo:IAO_0000115>A coating excipient role that is realized by preventing denaturation, disintegration, or some other method of destruction of a drug preparation</obo:IAO_0000115>
+        <obo:IAO_0000119>DRON</obo:IAO_0000119>
     </owl:Class>
     
 
@@ -1308,6 +1306,8 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000054">
         <rdfs:label xml:lang="en">enteric coating excipient role</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000053"/>
+        <obo:IAO_0000115>A protective coating excipient role that is realized by a process of delaying release of one or more active ingredients from the drug product until some targeted time or location, typically the small or large intestine, within an organism</obo:IAO_0000115>
+        <obo:IAO_0000119>DRON</obo:IAO_0000119>
     </owl:Class>
     
 
@@ -1317,6 +1317,8 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000055">
         <rdfs:label xml:lang="en">administration coating excipient role</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000052"/>
+        <obo:IAO_0000119>DRON</obo:IAO_0000119>
+        <obo:IAO_0000115>A coating excipient role that is realized by facilitating a process of drug administration.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1326,6 +1328,8 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000056">
         <rdfs:label xml:lang="en">flavor coating excipient role</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000055"/>
+        <obo:IAO_0000119>DRON</obo:IAO_0000119>
+        <obo:IAO_0000115>An administration coating excipient role that is realized by a drug manufacturing process that results in the drug product bearing a particular flavor quality</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1335,6 +1339,8 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000057">
         <rdfs:label xml:lang="en">lubricant coating excipient role</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000055"/>
+        <obo:IAO_0000119>DRON</obo:IAO_0000119>
+        <obo:IAO_0000115>An administration coating excipient role that is realized by decreased friction between the drug preparation and some part of an organism during drug administration</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1344,6 +1350,8 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000058">
         <rdfs:label xml:lang="en">binding excipient role</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046"/>
+        <obo:IAO_0000119>DRON</obo:IAO_0000119>
+        <obo:IAO_0000115>An excipient role that is realized by a process of drug manufacturing and results in increased volume or cohesion of the drug product.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1353,6 +1361,8 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000059">
         <rdfs:label xml:lang="en">flavor excipient role</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046"/>
+        <obo:IAO_0000115>An administration coating excipient role that is realized by a drug manufacturing process that results in the drug product bearing a particular flavor quality</obo:IAO_0000115>
+        <obo:IAO_0000119>DRON</obo:IAO_0000119>
     </owl:Class>
     
 
@@ -1362,6 +1372,8 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000060">
         <rdfs:label xml:lang="en">sorbent excipient role</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046"/>
+        <obo:IAO_0000119>DRON</obo:IAO_0000119>
+        <obo:IAO_0000115>An excipient role that is realized by its bearer binding with water in the environment to prevent water binding with other ingredients in the drug product.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1371,6 +1383,8 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000061">
         <rdfs:label xml:lang="en">preservative excipient role</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046"/>
+        <obo:IAO_0000115>An excipient role that is realized by increasing the duration of time that a drug product is effective.</obo:IAO_0000115>
+        <obo:IAO_0000119>DRON</obo:IAO_0000119>
     </owl:Class>
     
 
@@ -1380,6 +1394,8 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000062">
         <rdfs:label xml:lang="en">disintegrant excipient role</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046"/>
+        <obo:IAO_0000119>DRON</obo:IAO_0000119>
+        <obo:IAO_0000115>An excipient role that is realized by a process of drug administration followed by the drug product breaking apart.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1389,6 +1405,8 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000063">
         <rdfs:label xml:lang="en">vehicle excipient role</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046"/>
+        <obo:IAO_0000119>DRON</obo:IAO_0000119>
+        <obo:IAO_0000115>An excipient role that is realized by a completed process of the active ingredient reaching its intended destination during drug administration.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1398,6 +1416,8 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000064">
         <rdfs:label xml:lang="en">color excipient role</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046"/>
+        <obo:IAO_0000119>DRON</obo:IAO_0000119>
+        <obo:IAO_0000115>An excipient role that is realized by a process of drug manufacturing that results in a particular, desired color quality of the drug product</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1429,6 +1449,8 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000067">
         <rdfs:label xml:lang="en">dispersing excipient role</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046"/>
+        <obo:IAO_0000115>An excipient role that is realised by its bearer being added to disperse a solid, poorly-water-soluble pharmacological agent in a liquid and to prevent clumping of the drug.</obo:IAO_0000115>
+        <obo:IAO_0000119>C. Gendrin, inspired by NCI Thesaurus: C42662</obo:IAO_0000119>
     </owl:Class>
     
 
@@ -1449,6 +1471,8 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000069">
         <rdfs:label xml:lang="en">printing ink excipient role</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046"/>
+        <obo:IAO_0000119>C. Gendrin, inspired by NCI Thesaurus: C42657</obo:IAO_0000119>
+        <obo:IAO_0000115>An excipient role that is realized by its bearer marking an ingested pharmaceutical dosage form</obo:IAO_0000115>
     </owl:Class>
     
 
