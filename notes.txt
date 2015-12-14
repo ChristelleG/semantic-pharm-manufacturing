@@ -23,5 +23,9 @@ Could add class hierarchy for route of administration but not clear how this is 
 
  See http://drugtopics.modernmedicine.com/drug-topics/news/modernmedicine/modern-medicine-news/overview-pharmaceutical-excipients-used-tablets for excipients list and their roles. Linking some of CHEBI entity to excipients components: tentative link: ex microscristalling cellulose excipient (the actual powder mixed with other tablets ingredients) is a scattered molecular aggregate with has grain molecular entity cellulose (CHEBI:62968) - this should works. 
 
-The FDA is providing an excipient database: http://www.fda.gov/Drugs/InformationOnDrugs/ucm113978.htm
+The FDA is providing an excipient database: http://www.fda.gov/Drugs/InformationOnDrugs/ucm113978.htm - might be useful to integrate this at a point
+
+Added link between pharmaceutical excipient, active principal ingredient and molecular entity through OBI term : "scattered molecular aggregate" : ex active pharmaceutical aggregate is a scattered molecular aggregate and has role active ingredient role
+
+Need to define several "level of material entity" - I mean molecular entity (this is included as CHEBI terms), crystal entity, granular entity (with subclass powder), finish product entity this is "pharmaceutical dosage form". ALl of those are "scattered molecular aggregate" - I have put them as subclass of chemical entity. 
 

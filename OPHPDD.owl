@@ -854,14 +854,14 @@
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
                 <owl:allValuesFrom rdf:resource="&obo;BFO_0000040"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000047"/>
+                <owl:allValuesFrom rdf:resource="&obo;BFO_0000040"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -872,8 +872,8 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
-                <owl:allValuesFrom rdf:resource="&obo;BFO_0000040"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000047"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000112 rdf:datatype="&xsd;string">A cell lysis, production of a cloning vector, creating a buffer.</obo:IAO_0000112>
@@ -1139,6 +1139,30 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     
 
 
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000017 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000017">
+        <rdfs:label xml:lang="en">crystal entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;CHEBI_24431"/>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000576"/>
+        <obo:IAO_0000115>A crystal or crystalline solid is a solid material whose constituents, such as atoms, molecules or ions, are arranged in a highly ordered microscopic structure, forming a crystal lattice that extends in all directions</obo:IAO_0000115>
+        <obo:IAO_0000119>Wikipedia</obo:IAO_0000119>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000018 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000018">
+        <rdfs:label xml:lang="en">granule entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;CHEBI_24431"/>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000576"/>
+        <obo:IAO_0000119>wikipedia</obo:IAO_0000119>
+        <obo:IAO_0000115>A granular material is a conglomeration of discrete solid, macroscopic particles characterized by a loss of energy whenever the particles interact (the most common example would be friction when grains collide)</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
     <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000019 -->
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000019">
@@ -1184,6 +1208,17 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     
 
 
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000021 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000021">
+        <rdfs:label xml:lang="en">powder entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000018"/>
+        <obo:IAO_0000115>A powder is a dry, bulk solid composed of a large number of very fine particles that may flow freely when shaken or tilted. Powders are a special sub-class of granular materials.</obo:IAO_0000115>
+        <obo:IAO_0000119>Wikipedia</obo:IAO_0000119>
+    </owl:Class>
+    
+
+
     <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000045 -->
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000045">
@@ -1222,13 +1257,13 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
-                <owl:allValuesFrom rdf:resource="&obo;CHEBI_62968"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_62968"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_62968"/>
+                <owl:allValuesFrom rdf:resource="&obo;CHEBI_62968"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
