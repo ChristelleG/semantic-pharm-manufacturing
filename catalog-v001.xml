@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://ontofox.hegroup.org/69n8avf2.owl" uri="ImportedTerms/CHEMINF_DataProperty.owl"/>
     <uri id="Imports Wizard Entry" name="http://ontofox.hegroup.org/e3pkxi9y.owl" uri="ImportedTerms/CHEMINF_ChemicalDescriptor.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/iao.owl" uri="ImportedTerms/iao_informationcontententity.owl"/>
     <uri id="Imports Wizard Entry" name="http://ontofox.hegroup.org/iorwzg3m.owl" uri="ImportedTerms/CHEMINF_ChemicalDisposition.owl"/>
