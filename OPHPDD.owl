@@ -93,6 +93,7 @@
         <obo:IAO_0000115 xml:lang="en">A phrase describing how a class name should be used. May also include other kinds of examples that facilitate immediate understanding of a class semantics, such as widely known prototypical subclasses or instances of the class. Although essential for high level terms, examples for low level terms (e.g., Affymetrix HU133 array) are not</obo:IAO_0000115>
         <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
         <obo:IAO_0000117 xml:lang="en">PERSON:Daniel Schober</obo:IAO_0000117>
+        <obo:IAO_0000111 xml:lang="en">example</obo:IAO_0000111>
         <obo:IAO_0000111 xml:lang="en">example of usage</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
         <rdfs:isDefinedBy rdf:resource="&obo;iao.owl"/>
@@ -326,6 +327,12 @@
     
 
 
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasSynonym -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasSynonym"/>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#id -->
 
     <owl:AnnotationProperty rdf:about="&oboInOwl;id"/>
@@ -401,6 +408,14 @@
 
     <owl:ObjectProperty rdf:about="&obo;BFO_0000055">
         <rdfs:label xml:lang="en">realizes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000136 -->
+
+    <owl:ObjectProperty rdf:about="&obo;IAO_0000136">
+        <rdfs:label xml:lang="en">is about</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -564,6 +579,14 @@
     <owl:ObjectProperty rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000041">
         <rdfs:label xml:lang="en">has particle grain</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="&obo;BFO_0000051"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/is_output_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/is_output_of">
+        <rdfs:label>is output of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -787,34 +810,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CHEBI_60003 -->
-
-    <owl:Class rdf:about="&obo;CHEBI_60003">
-        <rdfs:label rdf:datatype="&xsd;string">pure substance</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;CHEBI_59999"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A pure substance is a chemical substance composed of multiple molecules, which are all of the same kind.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="&xsd;string">CHEBI:60003</oboInOwl:id>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">Reine Substanz</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">chebi_ontology</oboInOwl:hasOBONamespace>
-        <obo:IAO_0000412 rdf:resource="&obo;chebi.owl"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CHEBI_60004 -->
-
-    <owl:Class rdf:about="&obo;CHEBI_60004">
-        <rdfs:label rdf:datatype="&xsd;string">mixture</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;CHEBI_59999"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A mixture is a chemical substance composed of multiple molecules, at least two of which are of a different kind.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="&xsd;string">CHEBI:60004</oboInOwl:id>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">Mischung</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">chebi_ontology</oboInOwl:hasOBONamespace>
-        <obo:IAO_0000412 rdf:resource="&obo;chebi.owl"/>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/CHEBI_62968 -->
 
     <owl:Class rdf:about="&obo;CHEBI_62968">
@@ -856,6 +851,51 @@
         <rdfs:label>role of scattered molecular aggregate</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000023"/>
         <obo:IAO_0000115>a role borne by a scattered molecular aggregate and realized by its grains participating in one or more processes</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000027 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000027">
+        <rdfs:label xml:lang="en">data item</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
+        <obo:IAO_0000116 xml:lang="en">2009-03-16: data item deliberatly ambiguous: we merged data set and datum to be one entity, not knowing how to define singular versus plural. So data item is more general than datum.</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">2009-03-16: removed datum as alternative term as datum specifically refers to singular form, and is thus not an exact synonym.</obo:IAO_0000116>
+        <obo:IAO_0000116>2014-03-31: See discussion at http://odontomachus.wordpress.com/2014/03/30/aboutness-objects-propositions/</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">2/2/2009 Alan and Bjoern discussing FACS run output data. This is a data item because it is about the cell population. Each element records an event and is typically further composed a set of measurment data items that record the fluorescent intensity stimulated by one of the lasers.</obo:IAO_0000116>
+        <obo:IAO_0000112 xml:lang="en">Data items include counts of things, analyte concentrations, and statistical summaries.</obo:IAO_0000112>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Chris Stoeckert</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Jonathan Rees</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">a data item is an information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">data</obo:IAO_0000118>
+        <obo:IAO_0000111 xml:lang="en">data item</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+        <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000030">
+        <rdfs:label xml:lang="en">information content entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;BFO_0000001"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000116 xml:lang="en">2014-03-10: The use of &quot;thing&quot; is intended to be general enough to include universals and configurations (see https://groups.google.com/d/msg/information-ontology/GBxvYZCk1oc/-L6B5fSBBTQJ).</obo:IAO_0000116>
+        <obo:IAO_0000115 xml:lang="en">A generically dependent continuant that is about some thing.</obo:IAO_0000115>
+        <obo:IAO_0000112 xml:lang="en">Examples of information content entites include journal articles, data, graphical layouts, and graphs.</obo:IAO_0000112>
+        <obo:IAO_0000119 xml:lang="en">OBI_0000142</obo:IAO_0000119>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Chris Stoeckert</obo:IAO_0000117>
+        <obo:IAO_0000111 xml:lang="en">information content entity</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+        <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
     </owl:Class>
     
 
@@ -1148,6 +1188,17 @@
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000089 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000089">
+        <rdfs:label>polarizability</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000404"/>
+        <dc:description>The ease of distortion of the electron cloud of a molecular entity by an electric field [source: IUPAC Gold Book - http://goldbook.iupac.org/P04711.html]</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000091 -->
 
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000091">
@@ -1225,6 +1276,17 @@
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000121 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000121">
+        <rdfs:label>electronegativity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000404"/>
+        <dc:description>Electronegativity is an atomic quality that describes its power to attract electrons to itself [source:IUPAC Gold Book - http://goldbook.iupac.org/E01990.html]</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000129 -->
 
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000129">
@@ -1267,6 +1329,17 @@
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000228 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000228">
+        <rdfs:label>refractive index</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000404"/>
+        <dc:description>The refractive index of a chemical substance is a measure of the manner in which  light waves are bent when they enter the medium of the chemical substance.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000230 -->
 
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000230">
@@ -1278,12 +1351,89 @@
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000235 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000235">
+        <rdfs:label>disposition to dissociate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000404"/>
+        <dc:description>The disposition to dissociate is the disposition of an ionic compound (complexes, or salts) to separate or split into smaller particles, ions, or radicals, usually in a reversible manner.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000236 -->
 
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000236">
         <rdfs:label>charge density</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000031"/>
         <dc:description>The linear, surface, or volume charge density is the amount of electric charge in a line, surface, or volume  respectively. [source: Wikipedia, http://en.wikipedia.org/wiki/Charge_density]</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000238 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000238">
+        <rdfs:label>meltability</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000404"/>
+        <oboInOwl:hasSynonym>fusibility</oboInOwl:hasSynonym>
+        <dc:description>The meltability of a chemical substance is a quality which inheres in the chemical substance by virtue of the ease with which the substance can be changed from a solid to a liquid state especially by the application of heat.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000248 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000248">
+        <rdfs:label>relative permittivity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000404"/>
+        <dc:description>Relative permittivity is a chemical substance quality that reflects the ability of a medium composed of molecules of a given type to transmit an electric field.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000255 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000255">
+        <rdfs:label>vaporizability</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000404"/>
+        <dc:description>The vaporizability of a chemical substance is a quality which inheres in the chemical substance by virtue of the ease with which the substance can be changed into a gaseous state.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000258 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000258">
+        <rdfs:label>solubility</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000404"/>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000259 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000259">
+        <rdfs:label>disposition to form</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000404"/>
+        <dc:description>The disposition to form is the disposition of an ionic compound (complexes, or salts) to form from the smaller particles, ions, or radicals from which it is constituted.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000353 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000353">
+        <rdfs:label>polarizability calculated by ACD/Labs PhysChem software library version 12.01</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000089"/>
+        <dc:description>Polarizability that has been calculated by ACD/Labs PhysChem software library version 12.01.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
     
@@ -1317,6 +1467,17 @@
         <rdfs:label>negative charge</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000120"/>
         <dc:description>Negative charge is a quality which inheres in a molecular entity by virtue of the molecular entity possessing more electrons overall than protons, thus having an overall negative charge.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000404 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000404">
+        <rdfs:label>chemical disposition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000016"/>
+        <dc:description>A chemical disposition is a disposition which inheres in a chemical entity.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
     
