@@ -437,15 +437,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/OBI_0000643 -->
-
-    <owl:ObjectProperty rdf:about="&obo;OBI_0000643">
-        <rdfs:label rdf:datatype="&xsd;string">has grain</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="&obo;BFO_0000051"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/RO_0000053 -->
 
     <owl:ObjectProperty rdf:about="&obo;RO_0000053">
@@ -546,6 +537,33 @@
         <obo:RO_0001900 rdf:resource="&obo;RO_0001901"/>
         <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
         <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000039 -->
+
+    <owl:ObjectProperty rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000039">
+        <rdfs:label xml:lang="en">has molecule grain</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;BFO_0000051"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000040 -->
+
+    <owl:ObjectProperty rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000040">
+        <rdfs:label xml:lang="en">has crystal grain</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;BFO_0000051"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000041 -->
+
+    <owl:ObjectProperty rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000041">
+        <rdfs:label xml:lang="en">has particle grain</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;BFO_0000051"/>
     </owl:ObjectProperty>
     
 
@@ -939,7 +957,13 @@
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000040"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
+                <owl:onProperty rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000039"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000039"/>
                 <owl:allValuesFrom rdf:resource="&obo;CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -947,12 +971,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;RO_0000086"/>
                 <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000101"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000112 rdf:datatype="&xsd;string">the sodium and chloride ions in a glass of salt water</obo:IAO_0000112>
@@ -1533,6 +1551,12 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000017">
         <rdfs:label xml:lang="en">crystal entity</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000576"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;RO_0000086"/>
+                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000031"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>A crystal or crystalline solid is a solid material whose constituents, such as atoms, molecules or ions, are arranged in a highly ordered microscopic structure, forming a crystal lattice that extends in all directions</obo:IAO_0000115>
         <obo:IAO_0000119>Wikipedia</obo:IAO_0000119>
     </owl:Class>
@@ -1628,6 +1652,24 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000021">
         <rdfs:label xml:lang="en">powder entity</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000576"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000041"/>
+                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000022"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000041"/>
+                <owl:allValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000022"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;RO_0000086"/>
+                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000032"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>A powder is a dry, bulk solid composed of a large number of very fine particles that may flow freely when shaken or tilted. Powders are a special sub-class of granular materials.</obo:IAO_0000115>
         <obo:IAO_0000119>Wikipedia</obo:IAO_0000119>
     </owl:Class>
@@ -1639,6 +1681,24 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000022">
         <rdfs:label xml:lang="en">particle entity</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000576"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;RO_0000086"/>
+                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000033"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000040"/>
+                <owl:allValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000017"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000040"/>
+                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000017"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1674,7 +1734,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000031">
         <rdfs:label xml:lang="en">crystal entity quality</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000086"/>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000042"/>
     </owl:Class>
     
 
@@ -1683,7 +1743,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000032">
         <rdfs:label xml:lang="en">powder entity quality</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000086"/>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000042"/>
     </owl:Class>
     
 
@@ -1692,7 +1752,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000033">
         <rdfs:label xml:lang="en">particle entity quality</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000086"/>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000042"/>
     </owl:Class>
     
 
@@ -1743,6 +1803,33 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     
 
 
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000042 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000042">
+        <rdfs:label xml:lang="en">solid quality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000101"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000043 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000043">
+        <rdfs:label xml:lang="en">liquid quality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000101"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000044 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000044">
+        <rdfs:label xml:lang="en">viscosity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000043"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000045 -->
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000045">
@@ -1772,15 +1859,28 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000047">
         <rdfs:label xml:lang="en">microcrystalline cellulose excipient</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000021"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
+                <owl:onProperty rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000041"/>
+                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000073"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000040"/>
+                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000072"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000039"/>
                 <owl:allValuesFrom rdf:resource="&obo;CHEBI_62968"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
+                <owl:onProperty rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000039"/>
                 <owl:someValuesFrom rdf:resource="&obo;CHEBI_62968"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2054,6 +2154,30 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046"/>
         <obo:IAO_0000115>An excipient role that is realized by its bearer preventing aggregation of the active drug in liquid form, allowing uniform concentrations to be maintained for accurate dosing</obo:IAO_0000115>
         <obo:IAO_0000119>C. Gendrin inspired by NCI Thesaurus: C42660</obo:IAO_0000119>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000072 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000072">
+        <rdfs:label xml:lang="en">microcrystalline cellulose crystalA</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000017"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000073 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000073">
+        <rdfs:label xml:lang="en">microcrystalline cellulose particleA</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000022"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000040"/>
+                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000072"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
