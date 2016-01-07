@@ -74,10 +74,12 @@
         <rdfs:label>editor preferred term</rdfs:label>
         <rdfs:label xml:lang="en">editor preferred label</rdfs:label>
         <rdfs:label xml:lang="en">editor preferred term</rdfs:label>
+        <obo:IAO_0000111>editor preferred term</obo:IAO_0000111>
         <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
         <obo:IAO_0000117 xml:lang="en">PERSON:Daniel Schober</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">The concise, meaningful, and human-friendly name for a class or property preferred by the ontology developers. (US-English)</obo:IAO_0000115>
         <obo:IAO_0000111 xml:lang="en">editor preferred label</obo:IAO_0000111>
+        <obo:IAO_0000111 xml:lang="en">editor preferred term</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
         <rdfs:isDefinedBy rdf:resource="&obo;iao.owl"/>
     </owl:AnnotationProperty>
@@ -118,11 +120,14 @@
         <rdfs:label rdf:datatype="&xsd;string">textual definition</rdfs:label>
         <rdfs:label>definition</rdfs:label>
         <rdfs:label xml:lang="en">definition</rdfs:label>
+        <obo:IAO_0000111 rdf:datatype="&xsd;string">definition</obo:IAO_0000111>
+        <obo:IAO_0000111 rdf:datatype="&xsd;string">textual definition</obo:IAO_0000111>
         <obo:IAO_0000111>definition</obo:IAO_0000111>
         <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
         <obo:IAO_0000117 xml:lang="en">PERSON:Daniel Schober</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">The official OBI definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions.</obo:IAO_0000115>
+        <obo:IAO_0000111 xml:lang="en">definition</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
         <rdfs:isDefinedBy rdf:resource="&obo;iao.owl"/>
     </owl:AnnotationProperty>
@@ -279,6 +284,16 @@
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="&dc;description">
+        <rdfs:label xml:lang="en-us">Description</rdfs:label>
+        <rdfs:comment xml:lang="en-us">An account of the content of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#hasAlternativeId -->
 
     <owl:AnnotationProperty rdf:about="&oboInOwl;hasAlternativeId">
@@ -314,6 +329,14 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#id -->
 
     <owl:AnnotationProperty rdf:about="&oboInOwl;id"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#inSubset -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;inSubset">
+        <rdfs:label rdf:datatype="&xsd;string">in_subset</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -506,6 +529,23 @@
 
     <owl:ObjectProperty rdf:about="&obo;RO_0000092">
         <rdfs:label xml:lang="en">disposition of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002180 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002180">
+        <rdfs:label xml:lang="en">has component</rdfs:label>
+        <obo:IAO_0000232 xml:lang="en">For use in recording has_part with a cardinality constraint, because OWL does not permit cardinality constraints to be used in combination with transitive object properties. In situations where you would want to say something like &apos;has part exactly 5 digit, you would instead use has_component exactly 5 digit.</obo:IAO_0000232>
+        <obo:IAO_0000115>w &apos;has component&apos; p if w &apos;has part&apos; p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type.</obo:IAO_0000115>
+        <obo:IAO_0000116>The definition of &apos;has component&apos; is still under discussion. The challenge is in providing a definition that does not imply transitivity.</obo:IAO_0000116>
+        <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:Componency"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;BFO_0000051"/>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+        <obo:RO_0001900 rdf:resource="&obo;RO_0001901"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
     </owl:ObjectProperty>
     
 
@@ -854,13 +894,19 @@
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
-                <owl:allValuesFrom rdf:resource="&obo;BFO_0000040"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000047"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:allValuesFrom rdf:resource="&obo;BFO_0000040"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
                 <owl:allValuesFrom rdf:resource="&obo;BFO_0000040"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -868,12 +914,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
                 <owl:someValuesFrom rdf:resource="&obo;BFO_0000040"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000047"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000112 rdf:datatype="&xsd;string">A cell lysis, production of a cloning vector, creating a buffer.</obo:IAO_0000112>
@@ -900,13 +940,19 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+                <owl:allValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;RO_0000086"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000101"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
-                <owl:allValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000112 rdf:datatype="&xsd;string">the sodium and chloride ions in a glass of salt water</obo:IAO_0000112>
@@ -921,6 +967,343 @@
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000013 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000013">
+        <rdfs:label>chirality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000031"/>
+        <dc:description>Chirality is a molecular entity quality which inheres in a molecular entity by virtue of the existence of another molecular entity which is the  mirror image of the first one, yet non-superposable on it.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000031 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000031">
+        <rdfs:label>molecular entity quality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000086"/>
+        <dc:description>A molecular entity quality is a quality which inheres in a molecular entity.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000033 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000033">
+        <rdfs:label>molecular structure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000031"/>
+        <dc:description>Molecular structure is a molecular entity quality that inheres in a molecule by virtue of its shape - the way in which the atoms which constitute the molecule are bonded together and the shape which they therefore form.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000054 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000054">
+        <rdfs:label>molecular composition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000031"/>
+        <dc:description>Molecular composition is a molecular entity quality that inheres in a molecule by virtue of the atoms which constitute the molecule.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000067 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000067">
+        <rdfs:label>cyclicity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000031"/>
+        <dc:description>cyclicity is a quality that inheres in a molecular entity by virtue of the presence of cycles in the connection of the atoms within the molecular entity.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000069 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000069">
+        <rdfs:label>polarity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000031"/>
+        <dc:description>Polarity is a quality that inheres in a molecular entity by virtue of whether or not the molecular entity has a separation of electric charge which leads to the molecule having an electric dipole.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000070 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000070">
+        <rdfs:label>polar</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000069"/>
+        <dc:description>Polar polarity is a quality that inheres in a molecular entity when the molecular entity is polar, i.e. does possess an electric dipole.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000071 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000071">
+        <rdfs:label>nonpolar</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000069"/>
+        <dc:description>Nonpolar polarity is a quality which inheres in a molecular entity when the molecular entity does not possess an electrical dipole.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000072 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000072">
+        <rdfs:label>cyclic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000067"/>
+        <dc:description>Cyclic cyclicity inheres in a molecule when the atoms of the molecule do contain at least one cycle in the atom-atom connection paths (through bonds).</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000073 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000073">
+        <rdfs:label>acyclic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000067"/>
+        <dc:description>Acyclic cyclicity inheres in a molecule when the atoms within the molecule do not contain at least one cycle in the atom-atom connection paths (through the bonds).</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000074 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000074">
+        <rdfs:label>chiral</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000013"/>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000075 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000075">
+        <rdfs:label>achiral</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000013"/>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000076 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000076">
+        <rdfs:label>aromatic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000115"/>
+        <dc:description>Aromatic aromaticity is a quality that inheres in a molecular entity when it possesses at least one ring that is aromatic.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000077 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000077">
+        <rdfs:label>non-aromatic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000115"/>
+        <dc:description>Non aromatic aromaticity is a quality that inheres in a molecular entity by virtue of the molecule possessing no rings that are aromatic.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000086 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000086">
+        <rdfs:label>chemical quality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000019"/>
+        <dc:description>A chemical quality is a quality that inheres in a molecular entity or aggregate molecular substance.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000091 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000091">
+        <rdfs:label>hybridization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000031"/>
+        <dc:description>The quality of an atom that reflects the combination of its atomic orbitals to create bonding orbitals.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000098 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000098">
+        <rdfs:label>valency</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000031"/>
+        <dc:description>Valency is an atomic quality of the number of chemical bonds formed by the atom.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000101 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000101">
+        <rdfs:label>chemical substance quality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000086"/>
+        <dc:description>A chemical substance quality is a quality that inheres in an aggregate molecular substance, such as a portion of solid or liquid matter.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000102 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000102">
+        <rdfs:label>crystal structure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000031"/>
+        <dc:description>A crystal structure is a chemical substance quality which inheres in a crystalline solid or liquid crystal substance by virtue of the way the molecules are ordered within the crystal.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000108 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000108">
+        <rdfs:label>atomic quality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000031"/>
+        <dc:description>An atomic quality is a molecular entity quality which inheres in an atom.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000115 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000115">
+        <rdfs:label>aromaticity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000031"/>
+        <dc:description>Aromaticity is a molecular entity quality that inheres in a conjugated ring of unsaturated bonds, lone pairs, or empty orbitals that exhibit a stabilization stronger than would be expected by the stabilization of conjugation alone.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000120 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000120">
+        <rdfs:label>charge</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000031"/>
+        <dc:description>Charge is a quality that inheres in a molecular entity by virtue of the overall electric charge of the molecule, which is due to a comparison between the total number of electrons and the total number of protons.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000129 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000129">
+        <rdfs:label>bond multiplicity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000031"/>
+        <dc:description>Bond multiplicity is the extent to which participating electrons are localized in the bonding orbitals.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000133 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000133">
+        <rdfs:label>sp hybridized</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000091"/>
+        <dc:description>The quality of an atom in which the 2s orbital mixes with only one of the three p-orbitals resulting in two sp orbitals and two remaining unchanged p orbitals. spsp overlap between two atoms form a s bond and two additional p bonds formed by pp overlap.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000134 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000134">
+        <rdfs:label>sp2 hybridized</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000091"/>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000135 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000135">
+        <rdfs:label>sp3 hybridized</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000091"/>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000230 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000230">
+        <rdfs:label>composition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000031"/>
+        <rdfs:comment>From PATO.</rdfs:comment>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000236 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000236">
+        <rdfs:label>charge density</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000031"/>
+        <dc:description>The linear, surface, or volume charge density is the amount of electric charge in a line, surface, or volume  respectively. [source: Wikipedia, http://en.wikipedia.org/wiki/Charge_density]</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000401 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000401">
+        <rdfs:label>neutral charge</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000120"/>
+        <dc:description>Neutral charge is a quality which inheres in a molecular entity by virtue of the molecular entity possessing the same amount of electrons overall as protons, thus having an overall neutral charge.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000402 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000402">
+        <rdfs:label>positive charge</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000120"/>
+        <dc:description>Positive charge is a quality which inheres in a molecular entity by virtue of the molecular entity possessing more protons overall than electrons, thus having an overall positive charge.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000403 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000403">
+        <rdfs:label>negative charge</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000120"/>
+        <dc:description>Negative charge is a quality which inheres in a molecular entity by virtue of the molecular entity possessing more electrons overall than protons, thus having an overall negative charge.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000001 -->
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000001">
@@ -929,15 +1312,15 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                        <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000019"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;RO_0000087"/>
                         <owl:someValuesFrom rdf:resource="&obo;DRON_00000001"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
+                        <owl:onProperty rdf:resource="&obo;RO_0002180"/>
+                        <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000019"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;RO_0002180"/>
                         <owl:allValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
@@ -951,6 +1334,12 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000047"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;RO_0000086"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000101"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000119>NCI Thesaurus: C42636</obo:IAO_0000119>
         <rdfs:seeAlso>NCI Thesaurus: C42636</rdfs:seeAlso>
         <obo:IAO_0000115>From NCI thesaurus: the form in which active and/or inert ingredient(s) are physically presented (code C42636 in NCI thesaurus).
@@ -1143,7 +1532,6 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000017">
         <rdfs:label xml:lang="en">crystal entity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;CHEBI_24431"/>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000576"/>
         <obo:IAO_0000115>A crystal or crystalline solid is a solid material whose constituents, such as atoms, molecules or ions, are arranged in a highly ordered microscopic structure, forming a crystal lattice that extends in all directions</obo:IAO_0000115>
         <obo:IAO_0000119>Wikipedia</obo:IAO_0000119>
@@ -1154,9 +1542,36 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000018 -->
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000018">
-        <rdfs:label xml:lang="en">granule entity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;CHEBI_24431"/>
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0000576"/>
+        <rdfs:label xml:lang="en">pharmaceutical granule</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000019"/>
+                                    <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000019"/>
+                                    <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000047"/>
         <obo:IAO_0000119>wikipedia</obo:IAO_0000119>
         <obo:IAO_0000115>A granular material is a conglomeration of discrete solid, macroscopic particles characterized by a loss of energy whenever the particles interact (the most common example would be friction when grains collide)</obo:IAO_0000115>
     </owl:Class>
@@ -1212,9 +1627,118 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000021">
         <rdfs:label xml:lang="en">powder entity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000018"/>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000576"/>
         <obo:IAO_0000115>A powder is a dry, bulk solid composed of a large number of very fine particles that may flow freely when shaken or tilted. Powders are a special sub-class of granular materials.</obo:IAO_0000115>
         <obo:IAO_0000119>Wikipedia</obo:IAO_0000119>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000022 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000022">
+        <rdfs:label xml:lang="en">particle entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000576"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000028 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000028">
+        <rdfs:label xml:lang="en">chemical substance mass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000101"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000029 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000029">
+        <rdfs:label xml:lang="en">chemical substance volume</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000101"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000030 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000030">
+        <rdfs:label xml:lang="en">chemical substance proportion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000101"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000031 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000031">
+        <rdfs:label xml:lang="en">crystal entity quality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000086"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000032 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000032">
+        <rdfs:label xml:lang="en">powder entity quality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000086"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000033 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000033">
+        <rdfs:label xml:lang="en">particle entity quality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000086"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000034 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000034">
+        <rdfs:label xml:lang="en">particle surface area</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000033"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000035 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000035">
+        <rdfs:label xml:lang="en">particle porosity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000033"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000036 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000036">
+        <rdfs:label xml:lang="en">molecular mass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000031"/>
+        <rdfs:seeAlso>PATO_0000125</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000037 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000037">
+        <rdfs:label xml:lang="en">particle size distribution</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000032"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000038 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000038">
+        <rdfs:label xml:lang="en">particle shape</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000033"/>
     </owl:Class>
     
 
@@ -1250,8 +1774,8 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000020"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;RO_0000087"/>
-                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000058"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
+                <owl:allValuesFrom rdf:resource="&obo;CHEBI_62968"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1262,8 +1786,8 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
-                <owl:allValuesFrom rdf:resource="&obo;CHEBI_62968"/>
+                <owl:onProperty rdf:resource="&obo;RO_0000087"/>
+                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000058"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
