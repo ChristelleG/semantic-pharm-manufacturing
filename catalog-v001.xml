@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://ontofox.hegroup.org/e3pkxi9y.owl" uri="ImportedTerms/CHEMINF_ChemicalDescriptor.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/iao.owl" uri="ImportedTerms/iao_informationcontententity.owl"/>
+    <uri id="Imports Wizard Entry" name="http://ontofox.hegroup.org/iorwzg3m.owl" uri="ImportedTerms/CHEMINF_ChemicalDisposition.owl"/>
+    <uri id="Imports Wizard Entry" name="http://ontofox.hegroup.org/5mnyv2f2.owl" uri="ImportedTerms/CHEMINF_chemicalquality.owl"/>
+    <uri id="Imports Wizard Entry" name="http://ontofox.hegroup.org/vwu4bw57.owl" uri="ImportedTerms/RO_hascomponent.owl"/>
     <uri id="Imports Wizard Entry" name="http://ontofox.hegroup.org/v4wq6gop.owl" uri="ImportedTerms/RO_bearerof.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/ro/releases/2015-10-29/ro.owl" uri="http://purl.obolibrary.org/obo/ro.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/bfo/2.0/bfo.owl" uri="http://purl.obolibrary.org/obo/bfo.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1449826099341" name="http://ontofox.hegroup.org/9tqfiqcv.owl" uri="ImportedTerms/CHEBI_ORganicMolecule.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1449826099341" name="http://ontofox.hegroup.org/ersv98y4.owl" uri="ImportedTerms/OBI_scattered_molecular_aggregate.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1449826099341" name="http://ontofox.hegroup.org/u2tvibak.owl" uri="ImportedTerms/CHEBIImport.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1449826099341" name="http://ontofox.hegroup.org/v4wq6gop.owl" uri="ImportedTerms/RO_bearerof.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1449826099341" name="http://ontofox.hegroup.org/w4mn8bdf.owl" uri="ImportedTerms/partof.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1449826099341" name="http://purl.obolibrary.org/obo/obi.owl" uri="ImportedTerms/OBI_ProcessedMaterial3.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1449826099341" name="http://www.OPHPDD.com/ontologies/OPHPDD.owl" uri="OPHPDD.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1452157435361" name="http://ontofox.hegroup.org/9tqfiqcv.owl" uri="ImportedTerms/CHEBI_ORganicMolecule.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1452157435361" name="http://ontofox.hegroup.org/ersv98y4.owl" uri="ImportedTerms/OBI_scattered_molecular_aggregate.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1452157435361" name="http://ontofox.hegroup.org/u2tvibak.owl" uri="ImportedTerms/CHEBIImport.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1452157435361" name="http://ontofox.hegroup.org/v4wq6gop.owl" uri="ImportedTerms/RO_bearerof.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1452157435361" name="http://ontofox.hegroup.org/w4mn8bdf.owl" uri="ImportedTerms/partof.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1452157435361" name="http://purl.obolibrary.org/obo/obi.owl" uri="ImportedTerms/OBI_ProcessedMaterial3.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1452157435361" name="http://www.OPHPDD.com/ontologies/OPHPDD.owl" uri="OPHPDD.owl"/>
     </group>
 </catalog>
