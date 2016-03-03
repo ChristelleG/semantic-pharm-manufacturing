@@ -446,6 +446,23 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000219 -->
+
+    <owl:ObjectProperty rdf:about="&obo;IAO_0000219">
+        <rdfs:label xml:lang="en">denotes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000407 -->
+
+    <owl:ObjectProperty rdf:about="&obo;IAO_0000407">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">has coordinate unit label</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBI_0000293 -->
 
     <owl:ObjectProperty rdf:about="&obo;OBI_0000293">
@@ -728,6 +745,14 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BFO_0000009 -->
+
+    <owl:Class rdf:about="&obo;BFO_0000009">
+        <rdfs:label xml:lang="en">two-dimensional spatial region</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/BFO_0000015 -->
 
     <owl:Class rdf:about="&obo;BFO_0000015">
@@ -748,6 +773,30 @@
         <obo:IAO_0000112 xml:lang="en">your process of aging.</obo:IAO_0000112>
         <rdfs:isDefinedBy rdf:resource="&obo;bfo.owl"/>
         <obo:IAO_0000412 rdf:resource="&obo;obi.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000018 -->
+
+    <owl:Class rdf:about="&obo;BFO_0000018">
+        <rdfs:label xml:lang="en">zero-dimensional spatial region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000026 -->
+
+    <owl:Class rdf:about="&obo;BFO_0000026">
+        <rdfs:label xml:lang="en">one-dimensional spatial region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000028 -->
+
+    <owl:Class rdf:about="&obo;BFO_0000028">
+        <rdfs:label xml:lang="en">three-dimensional spatial region</rdfs:label>
     </owl:Class>
     
 
@@ -1022,6 +1071,157 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000400 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000400">
+        <rdfs:label xml:lang="en">cartesian spatial coordinate datum</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000219"/>
+                <owl:someValuesFrom rdf:resource="&obo;BFO_0000018"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000407"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000232>AR notes: We need to discuss whether it should include site.</obo:IAO_0000232>
+        <obo:IAO_0000116 xml:lang="en">2009-08-18 Alan Ruttenberg - question to BFO list about whether the BFO sense of the lower dimensional regions is that they are always part of actual space (the three dimensional sort) http://groups.google.com/group/bfo-discuss/browse_thread/thread/9d04e717e39fb617</obo:IAO_0000116>
+        <obo:IAO_0000115 xml:lang="en">A cartesian spatial coordinate datum is a representation of a point in a spatial region, in which equal changes in the magnitude of a coordinate value denote length qualities with the same magnitude</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
+        <rdfs:seeAlso xml:lang="en">http://groups.google.com/group/bfo-discuss/browse_thread/thread/9d04e717e39fb617</rdfs:seeAlso>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
+        <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000401 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000401">
+        <rdfs:label xml:lang="en">one dimensional cartesian spatial coordinate datum</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000400"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000219"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&obo;BFO_0000018"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="&obo;BFO_0000026"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000404"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A cartesion spatial coordinate datum that  uses one value to specify a position along a one dimensional spatial region</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+        <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000402 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000402">
+        <rdfs:label xml:lang="en">two dimensional cartesian spatial coordinate datum</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000400"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000406"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000404"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000219"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&obo;BFO_0000018"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="&obo;BFO_0000009"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A cartesion spatial coordinate datum that  uses two values to specify a position within a two dimensional spatial region</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+        <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000403 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000403">
+        <rdfs:label xml:lang="en">three dimensional cartesian spatial coordinate datum</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000400"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000404"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000406"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000405"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000219"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&obo;BFO_0000018"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="&obo;BFO_0000028"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A cartesion spatial coordinate datum that  uses three values to specify a position within a three dimensional spatial region</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+        <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBI_0000011 -->
 
     <owl:Class rdf:about="&obo;OBI_0000011">
@@ -1074,18 +1274,6 @@
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000047"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:allValuesFrom rdf:resource="&obo;BFO_0000040"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
                 <owl:allValuesFrom rdf:resource="&obo;BFO_0000040"/>
             </owl:Restriction>
@@ -1094,6 +1282,18 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
                 <owl:someValuesFrom rdf:resource="&obo;BFO_0000040"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:allValuesFrom rdf:resource="&obo;BFO_0000040"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000047"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000112 rdf:datatype="&xsd;string">A cell lysis, production of a cloning vector, creating a buffer.</obo:IAO_0000112>
@@ -1120,13 +1320,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000039"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+                <owl:allValuesFrom rdf:resource="&obo;CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000039"/>
-                <owl:allValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1402,6 +1602,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000042">
         <rdfs:label>molecular formula</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000136"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000054"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A molecular formula is a structure descriptor which identifies each constituent element by its chemical symbol and indicates the number of atoms of each element found in each discrete molecule of that compound.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -1725,6 +1937,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000078">
         <rdfs:label>neutron count</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000209"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000054"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>The (integer) number of neutrons in the atoms nucleus.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -1736,6 +1960,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000079">
         <rdfs:label>proton count</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000209"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000054"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>The (integer) number of protons in the atoms nucleus.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -1853,6 +2089,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000090">
         <rdfs:label>atomic degree</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000209"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>The integer number of non-H substituents of an atom.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -2181,6 +2423,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000123">
         <rdfs:label>chemical descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&obo;BFO_0000020"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
@@ -2656,6 +2904,7 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000178">
         <rdfs:label>collection of 3D atomic coordinates</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000177"/>
+        <rdfs:comment>? &quot;The x, y, z coordinates of the atoms in orthogonal space&quot;</rdfs:comment>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
     
@@ -3056,6 +3305,18 @@
                 <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000230"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>The integer number of atoms in a pi-orbital system.</dc:description>
         <cheminf-core:short_name>LargestPiSystem</cheminf-core:short_name>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
@@ -3165,6 +3426,18 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000012"/>
                 <owl:someValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000230"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A descriptor that specifies the integer count of bonds in a given molecular entity.</dc:description>
@@ -3310,6 +3583,18 @@
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000209"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000230"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000012"/>
                 <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
@@ -3331,6 +3616,12 @@
                 <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A descriptor that reflects the integer number of hydrogen bond acceptors in a given molecular entity, as determined by a given method. In highly simplified terms, this is usually the count of all negatively or partially negatively charged heteroatoms (e.g. alcohol oxygen) capable of accepting a hydrogen bond.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -3346,6 +3637,18 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000012"/>
                 <owl:someValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000230"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>The largest chain size descriptor is a count descriptor that gives the integer length (number of atoms) in the largest chain in a molecular entity.</dc:description>
@@ -3519,6 +3822,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000263">
         <rdfs:label>atom count</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000209"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000230"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000012"/>
@@ -3827,8 +4142,20 @@
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000209"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000012"/>
                 <owl:someValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000230"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A descriptor that specifies the integer count of acidic groups in a given molecular entity.</dc:description>
@@ -3844,8 +4171,20 @@
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000209"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000230"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000012"/>
                 <owl:someValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A descriptor that specifies the integer count of basic groups in a given molecular entity.</dc:description>
@@ -6299,8 +6638,8 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000576"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000041"/>
-                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000022"/>
+                <owl:onProperty rdf:resource="&obo;RO_0000086"/>
+                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000032"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -6311,8 +6650,8 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;RO_0000086"/>
-                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000032"/>
+                <owl:onProperty rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000041"/>
+                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000022"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A powder is a dry, bulk solid composed of a large number of very fine particles that may flow freely when shaken or tilted. Powders are a special sub-class of granular materials.</obo:IAO_0000115>
@@ -6328,6 +6667,12 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000576"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000040"/>
+                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000017"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;RO_0000086"/>
                 <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000033"/>
             </owl:Restriction>
@@ -6336,12 +6681,6 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000040"/>
                 <owl:allValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000017"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000040"/>
-                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000017"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -6507,20 +6846,14 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000021"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000041"/>
-                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000073"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000040"/>
-                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000072"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000039"/>
                 <owl:allValuesFrom rdf:resource="&obo;CHEBI_62968"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;RO_0000087"/>
+                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000058"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -6531,8 +6864,14 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;RO_0000087"/>
-                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000058"/>
+                <owl:onProperty rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000040"/>
+                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000072"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000041"/>
+                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000073"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -6834,8 +7173,14 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000001"/>
+                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000081"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000080"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -6846,14 +7191,8 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000081"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000080"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000001"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>From NCI Thesaurus: The composition of a dosage form, including the characteristics of its raw materials and the operations required to process it. Formulation factors include chemical nature of the drug (ester, salt, complex, etc...), drug solubility in water and organic solvents, particle size and surface area, type of dosage form (solution, suspension, capsule, tablet) and the excipients and processes used in the manufacturing of the drug delivery systems.</obo:IAO_0000115>
@@ -6988,6 +7327,15 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000120 -->
+
+    <owl:Thing rdf:about="&obo;IAO_0000120">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label xml:lang="en">metadata complete</rdfs:label>
+    </owl:Thing>
     
 
 
