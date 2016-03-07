@@ -8,6 +8,7 @@
     <!ENTITY obo "http://purl.obolibrary.org/obo/" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY pato "http://purl.obolibrary.org/obo/pato#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
@@ -25,6 +26,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:cheminf="http://www.semanticweb.org/ontologies/cheminf.owl#"
+     xmlns:pato="&obo;pato#"
      xmlns:bibo="http://purl.org/ontology/bibo/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
@@ -285,6 +287,30 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/pato#attribute_slim -->
+
+    <owl:AnnotationProperty rdf:about="&obo;pato#attribute_slim"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/pato#mpath_slim -->
+
+    <owl:AnnotationProperty rdf:about="&obo;pato#mpath_slim"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/pato#relational_slim -->
+
+    <owl:AnnotationProperty rdf:about="&obo;pato#relational_slim"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/pato#scalar_slim -->
+
+    <owl:AnnotationProperty rdf:about="&obo;pato#scalar_slim"/>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
     <owl:AnnotationProperty rdf:about="&dc;creator"/>
@@ -424,6 +450,7 @@
     <owl:ObjectProperty rdf:about="&obo;BFO_0000051">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label rdf:datatype="&xsd;string">has part</rdfs:label>
+        <rdfs:label xml:lang="en">has part</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1020,6 +1047,97 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000001 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000001">
+        <rdfs:label xml:lang="en">conditional specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000033"/>
+        <obo:IAO_0000119 xml:lang="en">OBI branch derived</obo:IAO_0000119>
+        <obo:IAO_0000119 xml:lang="en">OBI_0000349</obo:IAO_0000119>
+        <obo:IAO_0000117 xml:lang="en">PlanAndPlannedProcess Branch</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">a directive information entity that specifies what should happen if the trigger condition is fulfilled</obo:IAO_0000115>
+        <obo:IAO_0000111 xml:lang="en">conditional specification</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
+        <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000005 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000005">
+        <rdfs:label xml:lang="en">objective specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000033"/>
+        <obo:IAO_0000116 xml:lang="en">2009-03-16: original definition when imported from OBI read: &quot;objective is an non realizable information entity which can serve as that  proper part of a plan towards which the realization of the plan is directed.&quot;</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">2014-03-31: In the example of usage (&quot;In the protocol of a ChIP assay the objective specification says to identify protein and DNA interaction&quot;) there is a protocol which is the ChIP assay protocol. In addition to being concretized on paper, the protocol can be concretized as a realizable entity, such as a plan that inheres in a person. The objective specification is the part that says that some protein and DNA interactions are identified. This is a specification of a process endpoint: the boundary in the process before which they are not identified and after which they are. During the realization of the plan, the goal is to get to the point of having the interactions, and participants in the realization of the plan try to do that.</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">Answers the question, why did you do this experiment?</obo:IAO_0000116>
+        <obo:IAO_0000112 xml:lang="en">In the protocol of a ChIP assay the objective specification says to identify protein and DNA interaction.</obo:IAO_0000112>
+        <obo:IAO_0000119 xml:lang="en">OBI Plan and Planned Process/Roles Branch</obo:IAO_0000119>
+        <obo:IAO_0000119 xml:lang="en">OBI_0000217</obo:IAO_0000119>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Barry Smith</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Bjoern Peters</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Jennifer Fostel</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">a directive information entity that describes an intended process endpoint. When part of a plan specification the concretization is realized in a planned process in which the bearer tries to effect the world so that the process endpoint is achieved.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">goal specification</obo:IAO_0000118>
+        <obo:IAO_0000111 xml:lang="en">objective specification</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+        <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000007 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000007">
+        <rdfs:label xml:lang="en">action specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000033"/>
+        <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">OBI Plan and Planned Process branch</obo:IAO_0000119>
+        <obo:IAO_0000112 xml:lang="en">Pour the contents of flask 1 into flask 2</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a directive information entity that describes an action the bearer will take</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+        <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000010 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000010">
+        <rdfs:label xml:lang="en">software</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000104"/>
+        <obo:IAO_0000119 xml:lang="en">GROUP: OBI</obo:IAO_0000119>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Bjoern Peters</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Chris Stoeckert</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Melanie Courtot</obo:IAO_0000117>
+        <obo:IAO_0000116 xml:lang="en">see sourceforge tracker discussion at http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1958818&amp;group_id=177891&amp;atid=886178</obo:IAO_0000116>
+        <obo:IAO_0000111 xml:lang="en">software</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
+        <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000025 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000025">
+        <rdfs:label xml:lang="en">programming language</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000104"/>
+        <obo:IAO_0000115 xml:lang="en">A language in which source code is written that is intended to be executed/run by a software interpreter. Programming languages are ways to write instructions that specify what to do, and sometimes, how to do it.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">OBI_0000058</obo:IAO_0000119>
+        <obo:IAO_0000112 xml:lang="en">R, Perl, Java</obo:IAO_0000112>
+        <obo:IAO_0000119 xml:lang="en">group:OBI</obo:IAO_0000119>
+        <obo:IAO_0000117 xml:lang="en">person:Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">person:Chris Stoeckert</obo:IAO_0000117>
+        <obo:IAO_0000111 xml:lang="en">programming language</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
+        <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000027 -->
 
     <owl:Class rdf:about="&obo;IAO_0000027">
@@ -1065,6 +1183,161 @@
         <obo:IAO_0000119 xml:lang="en">OBI_0000142</obo:IAO_0000119>
         <obo:IAO_0000117 xml:lang="en">PERSON: Chris Stoeckert</obo:IAO_0000117>
         <obo:IAO_0000111 xml:lang="en">information content entity</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+        <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000033 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000033">
+        <rdfs:label xml:lang="en">directive information entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
+        <obo:IAO_0000116 xml:lang="en">2009-03-16: provenance: a term realizable information entity was proposed for OBI (OBI_0000337) , edited by the PlanAndPlannedProcess branch. Original definition was  &quot;is the specification of a process that can be concretized and realized by an actor&quot; with alternative term  &quot;instruction&quot;.It has been subsequently moved to IAO where the objective for which the original term was defined was satisfied with the definitionof this, different, term.</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">2013-05-30 Alan Ruttenberg: What differentiates a directive information entity from an information concretization is that it can have concretizations that are either qualities or realizable entities. The concretizations that are realizable entities are created when an individual chooses to take up the direction, i.e. has the intention to (try to) realize it.</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">8/6/2009 Alan Ruttenberg: Changed label from &quot;information entity about a realizable&quot; after discussions at ICBO</obo:IAO_0000116>
+        <obo:IAO_0000115 xml:lang="en">An information content entity whose concretizations indicate to their bearer how to realize them in a process.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Bjoern Peters</obo:IAO_0000117>
+        <obo:IAO_0000116 xml:lang="en">Werner pushed back on calling it realizable information entity as it isn&apos;t realizable. However this name isn&apos;t right either. An example would be a recipe. The realizable entity would be a plan, but the information entity isn&apos;t about the plan, it, once concretized, *is* the plan. -Alan</obo:IAO_0000116>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+        <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000034 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000034">
+        <rdfs:label xml:lang="en">time trigger</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000001"/>
+        <obo:IAO_0000119 xml:lang="en">OBI branch derived</obo:IAO_0000119>
+        <obo:IAO_0000119 xml:lang="en">OBI_0000331</obo:IAO_0000119>
+        <obo:IAO_0000117 xml:lang="en">PlanAndPlannedProcess Branch</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">revisit?</obo:IAO_0000115>
+        <obo:IAO_0000111 xml:lang="en">time trigger</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
+        <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000055 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000055">
+        <rdfs:label xml:lang="en">rule</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000001"/>
+        <obo:IAO_0000116 xml:lang="en">MSI</obo:IAO_0000116>
+        <obo:IAO_0000119 xml:lang="en">OBI_0500021</obo:IAO_0000119>
+        <obo:IAO_0000117 xml:lang="en">PRS</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">PRS</obo:IAO_0000119>
+        <obo:IAO_0000115 xml:lang="en">a rule is an executable which guides, defines, restricts actions</obo:IAO_0000115>
+        <obo:IAO_0000112 xml:lang="en">example to be added</obo:IAO_0000112>
+        <obo:IAO_0000111 xml:lang="en">rule</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+        <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000064 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000064">
+        <rdfs:label xml:lang="en">algorithm</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000104"/>
+        <obo:IAO_0000115 xml:lang="en">A plan specification which describes the inputs and output of mathematical functions as well as workflow of execution for achieving an predefined objective. Algorithms are realized usually by means of implementation as computer programs for execution by automata.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">OBI_0000270</obo:IAO_0000119>
+        <obo:IAO_0000112 xml:lang="en">PMID: 18378114.Genomics. 2008 Mar 28. LINKGEN: A new algorithm to process data in genetic linkage studies.</obo:IAO_0000112>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PlanAndPlannedProcess Branch</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">adapted from discussion on OBI list (Matthew Pocock, Christian Cocos, Alan Ruttenberg)</obo:IAO_0000119>
+        <obo:IAO_0000111 xml:lang="en">algorithm</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
+        <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000065 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000065">
+        <rdfs:label xml:lang="en">software interpreter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000064"/>
+        <obo:IAO_0000115 xml:lang="en">A software interpreter is a software application that executes some specified input software. </obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Do we care? Jennifer: Yes, there was a particular version of R that had a bug and it was fixed later. That would imply that we mean specific version of an interpreter. So an instance of this would be a particular version of the interpreter</obo:IAO_0000116>
+        <obo:IAO_0000119 xml:lang="en">OBI_0000199</obo:IAO_0000119>
+        <obo:IAO_0000112 xml:lang="en">R program, Perl interpreter, Java virtual machine</obo:IAO_0000112>
+        <obo:IAO_0000119 xml:lang="en">group:OBI</obo:IAO_0000119>
+        <obo:IAO_0000117 xml:lang="en">person:Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">person:Chris Stoeckert</obo:IAO_0000117>
+        <obo:IAO_0000111 xml:lang="en">software interpreter</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
+        <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000096 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000096">
+        <rdfs:label xml:lang="en">source code module</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000033"/>
+        <obo:IAO_0000115 xml:lang="en">A source code module is a directive information entity that specifies, using a programming language, some algorithm.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">OBI_0000039</obo:IAO_0000119>
+        <obo:IAO_0000112 xml:lang="en">The written source code that implements part of an algorithm. Test - if you know that it was written in a specific language, then it can be source code module. We mean here, roughly, the wording of a document such as a perl script.</obo:IAO_0000112>
+        <obo:IAO_0000119 xml:lang="en">group:OBI</obo:IAO_0000119>
+        <obo:IAO_0000117 xml:lang="en">person:Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">person:Chris Stoeckert</obo:IAO_0000117>
+        <obo:IAO_0000111 xml:lang="en">source code module</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+        <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000098 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000098">
+        <rdfs:label xml:lang="en">data format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000033"/>
+        <obo:IAO_0000119 xml:lang="en">OBI branch derived</obo:IAO_0000119>
+        <obo:IAO_0000119 xml:lang="en">OBI_0000187</obo:IAO_0000119>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PlanAndPlannedProcess Branch</obo:IAO_0000117>
+        <obo:IAO_0000111 xml:lang="en">data format specification</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+        <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000104 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000104">
+        <rdfs:label xml:lang="en">plan specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000033"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000007"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000005"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000116 xml:lang="en">2009-03-16: provenance: a term a plan was proposed for OBI (OBI_0000344) , edited by the PlanAndPlannedProcess branch. Original definition was &quot; a plan is a specification of a process that is realized by an actor to achieve the objective specified as part of the plan&quot;. It has been subsequently moved to IAO where the objective for which the original term was defined was satisfied with the definitionof this, different, term.</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">2014-03-31: A plan specification can have other parts, such as conditional specifications.</obo:IAO_0000116>
+        <obo:IAO_0000115 xml:lang="en">A directive information entity with action specifications and objective specifications as parts that, when concretized, is realized in a process in which the bearer tries to achieve the objectives by taking the actions specified.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000116 xml:lang="en">Alternative previous definition: a plan is a set of instructions that specify how an objective should be achieved</obo:IAO_0000116>
+        <obo:IAO_0000119 xml:lang="en">OBI Plan and Planned Process branch</obo:IAO_0000119>
+        <obo:IAO_0000119 xml:lang="en">OBI_0000344</obo:IAO_0000119>
+        <obo:IAO_0000112 xml:lang="en">PMID: 18323827.Nat Med. 2008 Mar;14(3):226.New plan proposed to help resolve conflicting medical advice.</obo:IAO_0000112>
+        <obo:IAO_0000111 xml:lang="en">plan specification</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
         <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
     </owl:Class>
@@ -1222,6 +1495,80 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000591 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000591">
+        <rdfs:label xml:lang="en">software method</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000010"/>
+        <obo:IAO_0000115 xml:lang="en">A software method (also called subroutine, subprogram, procedure, method, function, or routine) is software designed to execute a specific task.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Melanie Courtot</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Michel Dumontier</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">http://code.google.com/p/information-artifact-ontology/issues/detail?id=80</obo:IAO_0000119>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+        <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000592 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000592">
+        <rdfs:label xml:lang="en">software module</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000010"/>
+        <obo:IAO_0000115 xml:lang="en"> A software module is software composed of a collection of software methods.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Melanei Courtot</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Michel Dumontier</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">http://code.google.com/p/information-artifact-ontology/issues/detail?id=80</obo:IAO_0000119>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+        <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000593 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000593">
+        <rdfs:label xml:lang="en">software library</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000010"/>
+        <obo:IAO_0000115 xml:lang="en">A software library is software composed of a collection of software modules and/or software methods in a form that can be statically or dynamically linked to some software application.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Melanie Courtot</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Michel Dumontier</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">http://code.google.com/p/information-artifact-ontology/issues/detail?id=80</obo:IAO_0000119>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+        <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000594 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000594">
+        <rdfs:label xml:lang="en">software application</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000010"/>
+        <obo:IAO_0000115 xml:lang="en">A software application is software that can be directly executed by some processing unit.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Melanie Courtot</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Michel Dumontier</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">http://code.google.com/p/information-artifact-ontology/issues/detail?id=80</obo:IAO_0000119>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+        <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000595 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000595">
+        <rdfs:label xml:lang="en">software script</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000010"/>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Melanie Courtot</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Michel Dumontier</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">http://code.google.com/p/information-artifact-ontology/issues/detail?id=80</obo:IAO_0000119>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+        <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBI_0000011 -->
 
     <owl:Class rdf:about="&obo;OBI_0000011">
@@ -1343,6 +1690,66 @@
         <obo:IAO_0000111 xml:lang="en">scattered molecular aggregate</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
         <obo:IAO_0000412 rdf:resource="&obo;obi.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0500000 -->
+
+    <owl:Class rdf:about="&obo;OBI_0500000">
+        <rdfs:label xml:lang="en">study design</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000104"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A plan specification comprised of protocols (which may specify how and what kinds of data will be gathered) that are executed as part of an investigation and is realized during a study design execution.</obo:IAO_0000115>
+        <obo:IAO_0000111 xml:lang="en">study design</obo:IAO_0000111>
+        <obo:IAO_0000412 rdf:resource="&obo;iao.owl"/>
+        <obo:IAO_0000412 rdf:resource="&obo;obi.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0000122 -->
+
+    <owl:Class rdf:about="&obo;PATO_0000122">
+        <rdfs:label rdf:datatype="&xsd;string">length</rdfs:label>
+        <rdfs:label>length</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;PATO_0001708"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A 1-D extent quality which is equal to the distance between two points.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">PATO:0000122</oboInOwl:id>
+        <obo:IAO_0000111 rdf:datatype="&xsd;string">length</obo:IAO_0000111>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">quality</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+        <obo:IAO_0000412 rdf:resource="&obo;pato.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;pato#attribute_slim"/>
+        <oboInOwl:inSubset rdf:resource="&obo;pato#mpath_slim"/>
+        <oboInOwl:inSubset rdf:resource="&obo;pato#scalar_slim"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/PATO"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0000125 -->
+
+    <owl:Class rdf:about="&obo;PATO_0000125">
+        <rdfs:label rdf:datatype="&xsd;string">mass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000019"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A physical quality that inheres in a bearer by virtue of the proportion of the bearer&apos;s amount of matter.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">PATO:0000125</oboInOwl:id>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">quality</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000412 rdf:resource="&obo;pato.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;pato#attribute_slim"/>
+        <oboInOwl:inSubset rdf:resource="&obo;pato#relational_slim"/>
+        <oboInOwl:inSubset rdf:resource="&obo;pato#scalar_slim"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001708 -->
+
+    <owl:Class rdf:about="&obo;PATO_0001708">
+        <rdfs:label>1-D extent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000211"/>
+        <dc:description>A one dimensional extent is a dimensional extent in only one dimension, e.g. a length.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
     
 
@@ -1476,6 +1883,17 @@
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000014 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000014">
+        <rdfs:label>chemical entity information format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000098"/>
+        <dc:description>A chemical entity information format specification is an information content entity which specifies a format in which information about a molecular entity should be encoded.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000015 -->
 
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000015">
@@ -1521,6 +1939,60 @@
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000020 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000020">
+        <rdfs:label>SMILES format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000035"/>
+        <dc:description>The simplified molecular input line entry specification (SMILES) is a specification for unambiguously describing the structure of chemical molecules using short ASCII strings. SMILES strings can be imported by most molecule editors for conversion back into two-dimensional drawings or three-dimensional models of the molecules (source:wikipedia).</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000021 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000021">
+        <rdfs:label>SMARTS format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000035"/>
+        <dc:description>Smiles ARbitrary Target Specification (SMARTS) is a language for specifying substructural patterns in molecules. The SMARTS line notation is expressive and allows extremely precise and transparent substructural specification and atom typing (source:Wikipedia)</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000022 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000022">
+        <rdfs:label>molecular structure encoding format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000014"/>
+        <dc:description>A molecular structure encoding format specification is a molecular entity format specification which specifies a format in which a molecular structure information entity may be encoded.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000023 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000023">
+        <rdfs:label>molecular stereochemistry format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000022"/>
+        <dc:description>A molecular stereochemistry format specification is a molecular structure format specification that specifies how to encode the stereochemical aspects of a molecular structure.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000024 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000024">
+        <rdfs:label>RS stereochemistry specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000028"/>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000025 -->
 
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000025">
@@ -1532,12 +2004,54 @@
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000026 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000026">
+        <rdfs:label>DL stereochemistry specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000028"/>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000027 -->
 
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000027">
         <rdfs:label>stereochemical descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000123"/>
         <dc:description>A stereochemical descriptor is a chemical descriptor which describes some aspect of the three dimensional structure of a chemical entity.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000028 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000028">
+        <rdfs:label>specification of stereochemistry by configuration</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000023"/>
+        <dc:description>A specification of stereochemistry by configuration specifies a format in which the stereochemistry of a molecule should be encoded with reference to the configuration of attachments around the stereogenic centre.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000029 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000029">
+        <rdfs:label>specification of stereochemistry by optical activity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000023"/>
+        <dc:description>A specification of stereochemistry by optical activity specifies a format by which the stereochemistry of a molecule should be encoded by reference to the observable optical activity of a chiral molecule.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000030 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000030">
+        <rdfs:label>+/- stereochemistry specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000029"/>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
     
@@ -1586,6 +2100,71 @@
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000035 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000035">
+        <rdfs:label>atomic connectivity molecular structure encoding format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000022"/>
+        <dc:description>An atomic connectivity molecular structure encoding format specification is a molecular structure encoding format specification which specifies a format in which the connectivity of atoms within a molecule may be specified.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000036 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000036">
+        <rdfs:label>molecular composition format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000014"/>
+        <dc:description>A molecular composition format specification is a molecular entity information format specification which specifies a format in which a molecular composition may be encoded.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000037 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000037">
+        <rdfs:label>IUPAC chemical formula</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000036"/>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000038 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000038">
+        <rdfs:label>InChI format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000035"/>
+        <dc:description>The IUPAC International Chemical Identifier (InChI) is a textual identifier  for chemical substances, designed to provide a standard and human-readable way to encode molecular information and to facilitate the search for such information in databases and on the web. Developed by IUPAC and NIST during 2000-2005, the format and algorithms are non-proprietary and the software is freely available under the open source LGPL license (though the term &quot;InChI&quot; is a trademark  of IUPAC). [source: Wikipedia, http://en.wikipedia.org/wiki/International_Chemical_Identifier]</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000039 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000039">
+        <rdfs:label>molecular entity name format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000014"/>
+        <dc:description>A molecular entity name format specification is a molecular entity information format specification which specifies a format in which a molecular entity name may be encoded.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000040 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000040">
+        <rdfs:label>Preferred IUPAC Name for Organic Compounds</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000039"/>
+        <rdfs:comment>http://www.iupac.org/web/ins/2001-043-1-800</rdfs:comment>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000041 -->
 
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000041">
@@ -1625,6 +2204,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000043">
         <rdfs:label>molecular entity name</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000061"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000039"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>An information entity about a molecular entity which serves to name that molecular entity.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -1637,6 +2228,17 @@
         <rdfs:label>preferred name</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000043"/>
         <dc:description>A preferred name is a molecular entity name which is preferred, or recommended, for usage in textual annotations referring to that molecular entity.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000045 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000045">
+        <rdfs:label>Preferred IUPAC Name for Inorganic Compounds</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000039"/>
+        <rdfs:comment>http://www.iupac.org/web/ins/2006-038-1-800</rdfs:comment>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
     
@@ -1740,6 +2342,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000056">
         <rdfs:label>aromaticity descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000087"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000115"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>An aromaticity descriptor is a chemical descriptor which indicates the aromaticity of a molecular entity.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -1751,6 +2365,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000059">
         <rdfs:label>InChIKey</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000061"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_36357"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
     
@@ -1783,7 +2403,23 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000062">
         <rdfs:label>bond order descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000093"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000063"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A bond order descriptor is a descriptor associated with a bond in a chemical entity which indicates the order of the bond (single, double or triple).</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000063 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000063">
+        <rdfs:label>chemical bond</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;CHEBI_24431"/>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
     
@@ -1806,7 +2442,23 @@
 
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000065">
         <rdfs:label>molecular entity descriptor</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000123"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/CHEMINF_000123"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                        <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000014"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>a molecular entity descriptor is a chemical descriptor that provides information about a molecular entity.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -2149,6 +2801,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000095">
         <rdfs:label>hybridization descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000087"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000091"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A hybridization descriptor is a chemical descriptor that is about the hybridization of atomic orbitals in a molecular entity.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -2160,6 +2824,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000096">
         <rdfs:label>atomic valence</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000087"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>Atomic valence is an atomic descriptor that specifies the maximum number of univalent atoms (originally hydrogen or chlorine atoms) which may combine with an atom of the element under consideration, or with a fragment, or for which an atom of this element can be substituted [source: IUPAC Gold Book - http://goldbook.iupac.org/V06588.html]</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -2194,6 +2864,17 @@
         <rdfs:label>atomic softness descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000094"/>
         <dc:description>An atomic softness descriptor is an atomic descriptor which is about the charge delocalizing ability of a given atom.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000100 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000100">
+        <rdfs:label>MOLfile format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000035"/>
+        <dc:description>The MOLfile atomic connectivity molecular structure encoding format specification may be found described at http://en.wikipedia.org/wiki/Chemical_table_file#Molfiles. It is composed primarily of a connection table (atoms and bonds); hydrogen may be implicit or explicit.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
     
@@ -2298,6 +2979,17 @@
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000111 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000111">
+        <rdfs:label>CML format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000035"/>
+        <dc:description>A CML (Chemical Markup Language) file is an XML-based representation of the atomic connectivity of a molecular entity.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000112 -->
 
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000112">
@@ -2347,6 +3039,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000116">
         <rdfs:label>atomic connectivity index</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000093"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>An atomic connectivity index is an atomic descriptor that is a measure of atomic connectivity, which can take various forms (e.g. zero-order, or first-order).</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -2369,6 +3067,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000118">
         <rdfs:label>formal charge descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000131"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
     
@@ -2379,6 +3083,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000119">
         <rdfs:label>partial charge descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000131"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A partial charge descriptor gives the charge with an absolute value of less than one elementary charge unit (that is, smaller than the charge of the electron). [source:wikipedia]</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -2412,6 +3122,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000122">
         <rdfs:label>electronegativity descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000087"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000121"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>An electronegativity descriptor is a chemical descriptor that is about the electronegativity quality of an atom.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -2454,6 +3176,58 @@
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000124 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000124">
+        <rdfs:label>radius</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;PATO_0001708"/>
+        <dc:description>A 1-D extent quality inhering in a bearer by virtue of the bearer&apos;s  dimension of extension to the circumference of a circle or sphere.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000125 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000125">
+        <rdfs:label>atomic radius</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000124"/>
+        <rdfs:comment>Atomic radius is the 1D extent of the electron cloud surrounding the atom.</rdfs:comment>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000126 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000126">
+        <rdfs:label>ionic radius</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000124"/>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000127 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000127">
+        <rdfs:label>van der Waals radius</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000125"/>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000128 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000128">
+        <rdfs:label>covalent radius</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000125"/>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000129 -->
 
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000129">
@@ -2470,6 +3244,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000130">
         <rdfs:label>bond multiplicity descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000087"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000129"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000063"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A bond multiplicity descriptor is a chemical descriptor that in primitive cases is defined as half of the difference between the number of bonding and antibonding electrons in a particular system, but may also be defined with relation to the strength of a single bond.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -2481,6 +3267,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000131">
         <rdfs:label>charge descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000087"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000120"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A charge descriptor is a chemical descriptor which indicates the charge of a chemical entity.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -2492,6 +3290,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000132">
         <rdfs:label>bond length descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000060"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&obo;PATO_0000122"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000063"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A bond length descriptor is a dimensional extent descriptor which gives the measured or predicted (idealised) length of an atom to atom bond within a chemical entity.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -2586,6 +3396,26 @@
         <rdfs:label xml:lang="en">generic SMILES descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000018"/>
         <dc:description>a generic SMILES descriptor is a SMILES descriptor that denotes only the labeled molecular graph (i.e. atoms and bonds, but no chiral or isotopic information).</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000150 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000150">
+        <rdfs:label>isomeric SMILES format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000020"/>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000151 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000151">
+        <rdfs:label>canonical SMILES format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000150"/>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
     
@@ -2939,6 +3769,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000181">
         <rdfs:label xml:lang="en">vertex adjacency matrix descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000093"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
     
@@ -3210,6 +4046,17 @@
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000211 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000211">
+        <rdfs:label>dimensional extent quality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000019"/>
+        <dc:description>A dimensional extent quality is a quality that inheres in a molecular entity by virtue of a measurement of length, area or volume in a one, two or three dimensional extent.</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000212 -->
 
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000212">
@@ -3294,6 +4141,26 @@
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000220 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000220">
+        <rdfs:label>cis-trans stereochemistry specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000028"/>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000222 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000222">
+        <rdfs:label>volume</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000227"/>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000223 -->
 
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000223">
@@ -3329,6 +4196,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000224">
         <rdfs:label>bond dissociation Gibbs energy descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000210"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000235"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000063"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>Bond dissociation Gibbs energy descriptor captures the Gibbs energy associated with the process of breaking the bond in question. This could be measured or calculated in vacuo or in a specific Solvent, at a given temperature and pressure. Depends on molecular conformation.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -3340,6 +4219,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000225">
         <rdfs:label>solvation Gibbs energy descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000208"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000258"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>The molecular entity solvation Gibbs energy descriptor reflects the Gibbs energy associated with the solvation of the molecular entity in question. This could be measured or calculated in vacuo or in a specific solvent, at a particular temperature and pressure. Depends on molecular conformation when computed.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -3351,6 +4242,23 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000226">
         <rdfs:label>bond charge density descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000231"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000063"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000227 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000227">
+        <rdfs:label>3-D extent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000211"/>
+        <dc:description>A three dimensional extent is a dimensional extent in three dimensions, e.g. a volume.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
     
@@ -3372,6 +4280,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000229">
         <rdfs:label>surface area descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000060"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000247"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A surface area descriptor is a descriptor which describes a measure or calculation of the surface area of a chemical entity.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -3394,6 +4314,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000231">
         <rdfs:label>charge density descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000087"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000236"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A charge density descriptor is a chemical entity descriptor which indicates the distribution of the electric charge over the volume of the chemical entity.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -3512,6 +4444,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000239">
         <rdfs:label>formation Gibbs energy descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000207"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000259"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>The formation Gibbs energy descriptor captures the Gibbs energy associated with the formation of a molecular entity, relative to the standard state of constituent atoms. This can be measured, calculated in vacuo, or calculated with respect to a specific solvent, at a particular temperature and pressure. When calculated, the formation Gibbs energy value depends on the molecular conformation.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -3540,6 +4484,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000241">
         <rdfs:label>formation enthalpy descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000207"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000259"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000118>heat of formation</obo:IAO_0000118>
         <obo:IAO_0000118>enthalpy of formation</obo:IAO_0000118>
         <dc:description>Molecular entity formation enthaply descriptor captures the enthalpy associated with the formation of the molecular entity in question, relative to the standard state of constituent atoms. This could be measured or calculated in vacuo or in a specific Solvent, at a particular temperature and pressure. Depends on molecular conformation when computed.</dc:description>
@@ -3553,6 +4509,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000242">
         <rdfs:label>volume descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000060"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000222"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A volume descriptor is a descriptor which describes a measure or calculation of the volume of a chemical entity.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -3657,6 +4625,16 @@
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000247 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000247">
+        <rdfs:label>surface area</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000262"/>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000248 -->
 
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000248">
@@ -3673,6 +4651,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000249">
         <rdfs:label>solvation entropy descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000208"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000258"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>The molecular entity solvation entropy descriptor reflects the entropy associated with the solvation of the molecular entity in question. This could be measured or calculated in vacuo or in a specific solvent, at a particular temperature and pressure. Depends on molecular conformation when computed.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -3684,6 +4674,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000250">
         <rdfs:label>solvation enthalpy descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000208"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000258"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>The molecular entity solvation enthalpy descriptor reflects the enthalpy associated with the solvation of the molecular entity in question. This could be measured or calculated in vacuo or in a specific solvent, at a particular temperature and pressure. Depends on molecular conformation when computed.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -3706,6 +4708,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000252">
         <rdfs:label>bond dissociation enthalpy descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000210"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000063"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000235"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>Bond dissociation enthalpy descriptor captures the enthalpy associated with the process of breaking the bond in question. This could be measured or calculated in vacuo or in a specific Solvent, at a given temperature and pressure. Depends on molecular conformation.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -3800,6 +4814,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000260">
         <rdfs:label>formation entropy descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000207"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000259"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>Molecular entity formaiton entropy descriptor captures the entropy associated with the formation of the molecular entity in question, relative to the standard state of constituent atoms. This could be measured or calculated in vacuo or in a specific Solvent, at a particular temperature and pressure. Depends on molecular conformation when computed.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -3811,7 +4837,30 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000261">
         <rdfs:label>relative permittivity descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000087"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000248"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_59999"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>The relative permittivity descriptor specifies the ratio of the electric field strength in vacuum to that in a given medium. It was formerly called the dielectric constant. [IUPAC Gold Book: http://goldbook.iupac.org/R05273.html ]</dc:description>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000262 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000262">
+        <rdfs:label>2-D extent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000211"/>
+        <dc:description>A two dimensional extent is a dimensional extent in two dimensions, e.g. an area.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
     
@@ -3851,6 +4900,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000264">
         <rdfs:label>atomic charge density descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000231"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
     
@@ -3861,6 +4916,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000265">
         <rdfs:label>bond dissociation entropy descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000210"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000235"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000063"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>Bond dissociation entropy descriptor captures the entropy associated with the process of breaking the bond in question. This could be measured or calculated in vacuo or in a specific Solvent, at a given temperature and pressure. Depends on molecular conformation.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -3883,6 +4950,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000268">
         <rdfs:label xml:lang="en">total formal charge descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000131"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A charge descriptor that gives the total charge for a molecule</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -4118,6 +5191,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000291">
         <rdfs:label>Highest Occupied Molecular Orbital Energy</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000087"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_24431"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000086"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A descriptor that the energy of the highest occupied &apos;molecular&apos; orbital of the chemical entity.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -4129,6 +5214,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000292">
         <rdfs:label>Lowest Unoccupied Molecular Orbital Energy</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000087"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000086"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_24431"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A descriptor that the energy of the lowest unoccupied &apos;molecular&apos; orbital of the chemical entity.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -5580,11 +6677,128 @@
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000500 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000500">
+        <rdfs:label>parameter data item</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+        <obo:IAO_0000115>A parameter data item is a data item that plays the role of a parameter to a software method. </obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000501 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000501">
+        <rdfs:label>numeric data item</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000012"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&xsd;decimal"/>
+                            <rdf:Description rdf:about="&xsd;float"/>
+                            <rdf:Description rdf:about="&xsd;integer"/>
+                            <rdf:Description rdf:about="&xsd;long"/>
+                        </owl:unionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A numeric data item is a data item which has a value which is numeric. </obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000502 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000502">
+        <rdfs:label>textual data item</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A textual data item is a data item which has a value that has at least some non-numeric characters included in it. </obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000503 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000503">
+        <rdfs:label>numeric parameter</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/CHEMINF_000500"/>
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/CHEMINF_000501"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000504 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000504">
+        <rdfs:label>textual parameter</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/CHEMINF_000500"/>
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/CHEMINF_000502"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000509 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000509">
+        <rdfs:label>numeric data format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000098"/>
+        <obo:IAO_0000115>A numeric data format specification is a data format specification for data items which are numeric, that is, they contain only numeric values.  </obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000510 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000510">
+        <rdfs:label>textual data format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000098"/>
+        <obo:IAO_0000115>A textual data format specification is a specification of the format of data items which are textual, that is, they consist of character data. </obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000511 -->
 
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000511">
         <rdfs:label>numeric chemical descriptor</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000123"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/CHEMINF_000123"/>
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/CHEMINF_000501"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
     
@@ -5594,7 +6808,14 @@
 
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000512">
         <rdfs:label>textual chemical descriptor</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000123"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/CHEMINF_000123"/>
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/CHEMINF_000502"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
     
@@ -5705,6 +6926,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_001100">
         <rdfs:label>Bond Polarizabilities</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000087"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000086"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>Descriptor that calculates the sum of the absolute value of the difference between atomic polarizabilities of all bonded atoms in the molecule (including implicit hydrogens).</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -7352,6 +8585,14 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
 
     <owl:NamedIndividual rdf:about="&obo;IAO_0000123">
         <rdfs:label xml:lang="en">metadata incomplete</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000124 -->
+
+    <owl:NamedIndividual rdf:about="&obo;IAO_0000124">
+        <rdfs:label xml:lang="en">uncurated</rdfs:label>
     </owl:NamedIndividual>
     
 

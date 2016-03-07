@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://ontofox.hegroup.org/iorwzg3m.owl#"
+     xml:base="http://ontofox.hegroup.org/iorwzg3m.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontologies="http://www.semanticweb.org/ontologies/"
+     xmlns:resource="http://semanticscience.org/resource/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+    <owl:Ontology rdf:about="http://ontofox.hegroup.org/iorwzg3m.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000412">
+        <rdfs:label xml:lang="en">imported from</rdfs:label>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasSynonym"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description">
+        <rdfs:label xml:lang="en-us">Description</rdfs:label>
+        <rdfs:comment xml:lang="en-us">An account of the content of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/is_output_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/is_output_of">
+        <rdfs:label>is output of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000089 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000089">
+        <rdfs:label>polarizability</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000404"/>
+        <dc:description>The ease of distortion of the electron cloud of a molecular entity by an electric field [source: IUPAC Gold Book - http://goldbook.iupac.org/P04711.html]</dc:description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000121 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000121">
+        <rdfs:label>electronegativity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000404"/>
+        <dc:description>Electronegativity is an atomic quality that describes its power to attract electrons to itself [source:IUPAC Gold Book - http://goldbook.iupac.org/E01990.html]</dc:description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000228 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000228">
+        <rdfs:label>refractive index</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000404"/>
+        <dc:description>The refractive index of a chemical substance is a measure of the manner in which  light waves are bent when they enter the medium of the chemical substance.</dc:description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000235 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000235">
+        <rdfs:label>disposition to dissociate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000404"/>
+        <dc:description>The disposition to dissociate is the disposition of an ionic compound (complexes, or salts) to separate or split into smaller particles, ions, or radicals, usually in a reversible manner.</dc:description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000238 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000238">
+        <rdfs:label>meltability</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000404"/>
+        <oboInOwl:hasSynonym>fusibility</oboInOwl:hasSynonym>
+        <dc:description>The meltability of a chemical substance is a quality which inheres in the chemical substance by virtue of the ease with which the substance can be changed from a solid to a liquid state especially by the application of heat.</dc:description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000248 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000248">
+        <rdfs:label>relative permittivity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000404"/>
+        <dc:description>Relative permittivity is a chemical substance quality that reflects the ability of a medium composed of molecules of a given type to transmit an electric field.</dc:description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000255 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000255">
+        <rdfs:label>vaporizability</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000404"/>
+        <dc:description>The vaporizability of a chemical substance is a quality which inheres in the chemical substance by virtue of the ease with which the substance can be changed into a gaseous state.</dc:description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000258 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000258">
+        <rdfs:label>solubility</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000404"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000259 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000259">
+        <rdfs:label>disposition to form</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000404"/>
+        <dc:description>The disposition to form is the disposition of an ionic compound (complexes, or salts) to form from the smaller particles, ions, or radicals from which it is constituted.</dc:description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000353 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000353">
+        <rdfs:label>polarizability calculated by ACD/Labs PhysChem software library version 12.01</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000089"/>
+        <dc:description>Polarizability that has been calculated by ACD/Labs PhysChem software library version 12.01.</dc:description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000404 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000404">
+        <rdfs:label>chemical disposition</rdfs:label>
+        <dc:description>A chemical disposition is a disposition which inheres in a chemical entity.</dc:description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.4.1806) http://owlapi.sourceforge.net -->
+

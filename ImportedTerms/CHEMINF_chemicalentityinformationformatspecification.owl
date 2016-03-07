@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://ontofox.hegroup.org/an9bjaui.owl#"
+     xml:base="http://ontofox.hegroup.org/an9bjaui.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:resource="http://semanticscience.org/resource/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://ontofox.hegroup.org/an9bjaui.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000412">
+        <rdfs:label xml:lang="en">imported from</rdfs:label>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description">
+        <rdfs:label xml:lang="en-us">Description</rdfs:label>
+        <rdfs:comment xml:lang="en-us">An account of the content of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000014 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000014">
+        <rdfs:label>chemical entity information format specification</rdfs:label>
+        <dc:description>A chemical entity information format specification is an information content entity which specifies a format in which information about a molecular entity should be encoded.</dc:description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000020 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000020">
+        <rdfs:label>SMILES format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000035"/>
+        <dc:description>The simplified molecular input line entry specification (SMILES) is a specification for unambiguously describing the structure of chemical molecules using short ASCII strings. SMILES strings can be imported by most molecule editors for conversion back into two-dimensional drawings or three-dimensional models of the molecules (source:wikipedia).</dc:description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000021 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000021">
+        <rdfs:label>SMARTS format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000035"/>
+        <dc:description>Smiles ARbitrary Target Specification (SMARTS) is a language for specifying substructural patterns in molecules. The SMARTS line notation is expressive and allows extremely precise and transparent substructural specification and atom typing (source:Wikipedia)</dc:description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000022 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000022">
+        <rdfs:label>molecular structure encoding format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000014"/>
+        <dc:description>A molecular structure encoding format specification is a molecular entity format specification which specifies a format in which a molecular structure information entity may be encoded.</dc:description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000023 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000023">
+        <rdfs:label>molecular stereochemistry format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000022"/>
+        <dc:description>A molecular stereochemistry format specification is a molecular structure format specification that specifies how to encode the stereochemical aspects of a molecular structure.</dc:description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000024 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000024">
+        <rdfs:label>RS stereochemistry specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000028"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000026 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000026">
+        <rdfs:label>DL stereochemistry specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000028"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000028 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000028">
+        <rdfs:label>specification of stereochemistry by configuration</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000023"/>
+        <dc:description>A specification of stereochemistry by configuration specifies a format in which the stereochemistry of a molecule should be encoded with reference to the configuration of attachments around the stereogenic centre.</dc:description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000029 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000029">
+        <rdfs:label>specification of stereochemistry by optical activity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000023"/>
+        <dc:description>A specification of stereochemistry by optical activity specifies a format by which the stereochemistry of a molecule should be encoded by reference to the observable optical activity of a chiral molecule.</dc:description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000030 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000030">
+        <rdfs:label>+/- stereochemistry specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000029"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000035 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000035">
+        <rdfs:label>atomic connectivity molecular structure encoding format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000022"/>
+        <dc:description>An atomic connectivity molecular structure encoding format specification is a molecular structure encoding format specification which specifies a format in which the connectivity of atoms within a molecule may be specified.</dc:description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000036 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000036">
+        <rdfs:label>molecular composition format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000014"/>
+        <dc:description>A molecular composition format specification is a molecular entity information format specification which specifies a format in which a molecular composition may be encoded.</dc:description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000037 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000037">
+        <rdfs:label>IUPAC chemical formula</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000036"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000038 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000038">
+        <rdfs:label>InChI format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000035"/>
+        <dc:description>The IUPAC International Chemical Identifier (InChI) is a textual identifier  for chemical substances, designed to provide a standard and human-readable way to encode molecular information and to facilitate the search for such information in databases and on the web. Developed by IUPAC and NIST during 2000-2005, the format and algorithms are non-proprietary and the software is freely available under the open source LGPL license (though the term &quot;InChI&quot; is a trademark  of IUPAC). [source: Wikipedia, http://en.wikipedia.org/wiki/International_Chemical_Identifier]</dc:description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000039 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000039">
+        <rdfs:label>molecular entity name format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000014"/>
+        <dc:description>A molecular entity name format specification is a molecular entity information format specification which specifies a format in which a molecular entity name may be encoded.</dc:description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000040 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000040">
+        <rdfs:label>Preferred IUPAC Name for Organic Compounds</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000039"/>
+        <rdfs:comment>http://www.iupac.org/web/ins/2001-043-1-800</rdfs:comment>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000045 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000045">
+        <rdfs:label>Preferred IUPAC Name for Inorganic Compounds</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000039"/>
+        <rdfs:comment>http://www.iupac.org/web/ins/2006-038-1-800</rdfs:comment>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000100 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000100">
+        <rdfs:label>MOLfile format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000035"/>
+        <dc:description>The MOLfile atomic connectivity molecular structure encoding format specification may be found described at http://en.wikipedia.org/wiki/Chemical_table_file#Molfiles. It is composed primarily of a connection table (atoms and bonds); hydrogen may be implicit or explicit.</dc:description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000111 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000111">
+        <rdfs:label>CML format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000035"/>
+        <dc:description>A CML (Chemical Markup Language) file is an XML-based representation of the atomic connectivity of a molecular entity.</dc:description>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000150 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000150">
+        <rdfs:label>isomeric SMILES format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000020"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000151 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000151">
+        <rdfs:label>canonical SMILES format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000150"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000220 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000220">
+        <rdfs:label>cis-trans stereochemistry specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000028"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cheminf.owl"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.4.1806) http://owlapi.sourceforge.net -->
+
