@@ -1732,6 +1732,8 @@
     <owl:Class rdf:about="&obo;PATO_0000125">
         <rdfs:label rdf:datatype="&xsd;string">mass</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000019"/>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000031"/>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000101"/>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">A physical quality that inheres in a bearer by virtue of the proportion of the bearer&apos;s amount of matter.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="&xsd;string">PATO:0000125</oboInOwl:id>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">quality</oboInOwl:hasOBONamespace>
@@ -1805,6 +1807,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000005">
         <rdfs:label>RS stereochemical descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000027"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000024"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000312"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000074"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
     
@@ -1848,6 +1862,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000010">
         <rdfs:label>atomic order</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000041"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000012"/>
@@ -1922,6 +1942,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000018">
         <rdfs:label>SMILES descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000085"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000020"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A SMILES descriptor is a structure descriptor that denotes a molecular structure as a graph.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -1933,6 +1965,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000019">
         <rdfs:label>SMARTS descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000085"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000021"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A SMARTS descriptor is a molecular structure descriptor that conforms to the SMARTS specification.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -2019,6 +2063,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000027">
         <rdfs:label>stereochemical descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000123"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000013"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A stereochemical descriptor is a chemical descriptor which describes some aspect of the three dimensional structure of a chemical entity.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -2260,6 +2310,24 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000048">
         <rdfs:label>+/- stereochemical descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000027"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000030"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000074"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
     
@@ -2290,6 +2358,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000051">
         <rdfs:label>DL stereochemical descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000027"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000074"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
     
@@ -2331,6 +2411,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000055">
         <rdfs:label>chemical connectivity table</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000085"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A chemical connectivity table is a structure descriptor which consists of a connection table representing bonds between atoms in a molecular entity.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -2481,6 +2567,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000068">
         <rdfs:label>functional group descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000085"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A functional group descriptor is a structural descriptor which describes specific groups of atoms within molecules that are responsible for the characteristic chemical reactions of those molecules.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -2635,6 +2727,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000080">
         <rdfs:label>cis-trans stereochemical descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000027"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000220"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000063"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Descriptors which show the relationship between two ligands attached to separate atoms that are connected by a double bond or are contained in a ring. The two ligands are said to be located cis to each other if they lie on the same side of a plane. If they are on opposite sides, their relative position is described as trans. The appropriate reference plane of a double bond is perpendicular to that of the relevant s-bonds and passes through the double bond.[source:IUPAC Gold Book - http://goldbook.iupac.org/C01092.html]</rdfs:comment>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -2666,6 +2770,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000083">
         <rdfs:label>mass descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&obo;PATO_0000125"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
     
@@ -2676,6 +2792,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000084">
         <rdfs:label>atomic mass descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000083"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
     
@@ -2718,6 +2840,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000088">
         <rdfs:label>molecular mass descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000083"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
         <obo:IAO_0000115>The mass of a molecule calculated according to some assumption about the isotopic identity of the atoms constituting it.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
@@ -2907,6 +3035,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000104">
         <rdfs:label>molecular QSAR descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000064"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A molecular QSAR descriptor is a OSAR descriptor which gives a quantitative value to some aspect of a molecular entity.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -2973,6 +3107,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000110">
         <rdfs:label>fused cycles</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000085"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>The fused cycles in a molecular structure are those cycles from the cycle basis which share at least one bond.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -2995,6 +3135,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000112">
         <rdfs:label>atomic QSAR descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000064"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>An atomic QSAR descriptor is a QSAR descriptor which gives a quantitative value to some aspect of an atom which is part of a molecular entity.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -3006,6 +3152,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000113">
         <rdfs:label>InChI descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000085"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000038"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>An InChI descriptor is a structure descriptor which conforms to the InChI format specification.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -3017,6 +3175,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000114">
         <rdfs:label>MOLfile descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000085"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000100"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A MOLfile descriptor is a structure descriptor which conforms to the MOLfile format specification.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -3734,6 +3904,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000178">
         <rdfs:label>collection of 3D atomic coordinates</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000177"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000403"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>? &quot;The x, y, z coordinates of the atoms in orthogonal space&quot;</rdfs:comment>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -4155,6 +4331,7 @@
 
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000222">
         <rdfs:label>volume</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000101"/>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000227"/>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -4697,6 +4874,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000251">
         <rdfs:label>logP descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_59999"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000258"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>The logarithm of octanol-water partition coefficient, which is the ratio of the molecules dissolved in octanol to those dissolved in pure un-ionized water upon mixture equilibration. This can be measured or predicted. The value is dimensionless. May depend on molecular conformation when computed.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -4731,6 +4920,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000253">
         <rdfs:label>refractive index descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000228"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_59999"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>Chemical substance refractive index descriptor is a unitless descriptor that specifies the ratio of the speed of light in vacuum to that in a given chemical substance. [IUPAC: http://goldbook.iupac.org/R05240.html]</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -4771,6 +4972,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000256">
         <rdfs:label>melting point descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000238"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_59999"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Melting point descriptor specifies the temperature at which a chemical substance undergoes the transition from solid to liquid state under standard conditions.</rdfs:comment>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -4782,6 +4995,18 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000257">
         <rdfs:label>boiling point descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000255"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_59999"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>The boiling point descriptor indicates the temperature at which a chemical substance undergoes a state transition from liquid to gas, at standard conditions.</rdfs:comment>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -6250,6 +6475,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000414">
         <rdfs:label>bioconcentration factor descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_59999"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A descriptor of the ratio of the concentration of a chemical substance in an organism immersed in water to that in the surrounding water at equilibrium.</dc:description>
         <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
@@ -6274,6 +6505,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000416">
         <rdfs:label>density descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_59999"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
         <dc:description>A descriptor of the density of a given substance at a given temperature and pressure.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
@@ -6286,6 +6523,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000417">
         <rdfs:label>flash point descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_59999"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -6354,6 +6597,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000432">
         <rdfs:label xml:lang="en">freezing point descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_59999"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A descriptor that indicates the temperature at which a chemical substance undergoes a state transition from gas or liquid to solid, under standard conditions.</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -6365,6 +6614,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000433">
         <rdfs:label xml:lang="en">Henry&apos;s Law constant</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_59999"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
     
@@ -6375,6 +6630,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000434">
         <rdfs:label xml:lang="en">atmospheric OH rate constant</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_59999"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A physical descriptor for the rate constant of a reaction of a chemical entity with OH. This is used to describe the atmospheric behaviour (i.e. stability) of the entity. </dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -6386,6 +6647,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000435">
         <rdfs:label xml:lang="en">upper explosive limit descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_59999"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A physical descriptor for the upper explosive limit of the entity in air as a percentage by volume at room temperature. </dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -6397,6 +6664,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000436">
         <rdfs:label xml:lang="en">lower explosive limit descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_59999"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A physical descriptor for the lower explosive limit in air as a percentage by volume at room temperature</dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -6408,6 +6681,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000437">
         <rdfs:label xml:lang="en">minimum explosive concentration descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_59999"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A physical descriptor for the minimum explosive concentration. </dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -6419,6 +6698,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000438">
         <rdfs:label xml:lang="en">specific gravity descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_59999"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A physical descriptor of the ratio of the density of chemical substance to the density of a reference substance. The reference substance is usually water for liquids or air for gases. </dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -6430,6 +6715,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000439">
         <rdfs:label xml:lang="en">relative density descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_59999"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A descriptor of the relative density of gases referenced to air as 1, which indicates how many times a gas is heavier than air at the same temperature. </dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -6441,6 +6732,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000440">
         <rdfs:label xml:lang="en">vapor density descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_59999"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A descriptor of the density of a vapour in relation in that of hydrogen, defined as the mass of a certain volume of the given substance divided by the mass of the same volume of hydrogen. </dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -6452,6 +6749,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000441">
         <rdfs:label xml:lang="en">odor detection threshold descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_59999"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A physical descriptor for the lowest concentration of an odorant chemical entity that is perceivable by the human sense of smell. </dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -6463,6 +6766,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000442">
         <rdfs:label xml:lang="en">pH descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_59999"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A physical descriptor which gives a measure of the acidity or basicity of an aqueous solution, defined as the decimal logarithm of the reciprocal of the hydrogen ion activity in a solution. </dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -6474,6 +6783,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000443">
         <rdfs:label xml:lang="en">evaporation rate descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_59999"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A physical descriptor of the rate of evaporation of a liquid under standard conditions. </dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -6485,6 +6800,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000444">
         <rdfs:label xml:lang="en">autoignition temperature descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_59999"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000118>kindling point</obo:IAO_0000118>
         <dc:description>A physical descriptor of the lowest temperature at a substance will spontaneously ignite in a normal atmosphere without an external source of ignition. </dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
@@ -6497,6 +6818,12 @@
     <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000445">
         <rdfs:label xml:lang="en">soil half-life descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_59999"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A physical descriptor for the time it takes for half of a portion of substance of a given type to decompose in soil under standard conditions. </dc:description>
         <obo:IAO_0000412 rdf:resource="&obo;cheminf.owl"/>
     </owl:Class>
@@ -7920,24 +8247,6 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     
 
 
-    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000028 -->
-
-    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000028">
-        <rdfs:label xml:lang="en">chemical substance mass</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000101"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000029 -->
-
-    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000029">
-        <rdfs:label xml:lang="en">chemical substance volume</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000101"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000030 -->
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000030">
@@ -7988,16 +8297,6 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000035">
         <rdfs:label xml:lang="en">particle porosity</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000033"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000036 -->
-
-    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000036">
-        <rdfs:label xml:lang="en">molecular mass</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000031"/>
-        <rdfs:seeAlso>PATO_0000125</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -8497,12 +8796,6 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000082">
         <rdfs:label xml:lang="en">excipient mass specification</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000079"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000028"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -8527,12 +8820,6 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000084">
         <rdfs:label xml:lang="en">active pharmaceutical ingredient mass specification</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000078"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000028"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
