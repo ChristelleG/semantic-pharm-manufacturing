@@ -8094,7 +8094,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000017">
         <rdfs:label xml:lang="en">crystal entity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0000576"/>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000047"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;RO_0000086"/>
@@ -8195,7 +8195,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000021">
         <rdfs:label xml:lang="en">powder entity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0000576"/>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000047"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;RO_0000086"/>
@@ -8224,7 +8224,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000022">
         <rdfs:label xml:lang="en">particle entity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0000576"/>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000047"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000040"/>
@@ -8243,6 +8243,25 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
                 <owl:allValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000017"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000023 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000023">
+        <rdfs:label xml:lang="en">crystal entity descriptor</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/CHEMINF_000123"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                        <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000017"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -8305,7 +8324,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000037">
         <rdfs:label xml:lang="en">particle size distribution</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000032"/>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000033"/>
     </owl:Class>
     
 
