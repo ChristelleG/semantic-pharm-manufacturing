@@ -39,4 +39,19 @@ Imported cheminf chemical descriptor and manually added some subclasses and prop
 Creating a "pharmaceutical formulation specification" this is an information content entity and the final pharmaceutical product's recipe. The definition is taken from the NCI Thesaurus code C42638.  The "pharmaceutical formulation specification" "is about" a "pharmaceutical dosage form". Use the standard IAO "is about" property, might be a bit too vague so could potentially define another one in the future. A "pharmaceutical formulation specification" might have several parts or topics: one can think of "pharmaceutical form specification" (is it liquid? solid?), 
 "pharmaceutical ingredient specification" (what is the API ? what is the Exciipients ?), "pharmaceutical manufacturing route specification" (what is the main process) .etc...
 
-Adding crystal structural properties. Inspiration from CCDC database. Considering adding "crystal cell lengths descriptor" , "crystal cell angles descriptor", "crystal spacegroup symbol descriptor", "crystal symetry operators descriptor", "crystal symmetry rotation descriptor", "crystal symmetry translation descriptor". Incorporated "cartesian spatial coordinate datum" from IAO. TO include descriptor related to crystal entity added defined class "crystal entity descriptor" (chemical descriptor and is about crystal entity). Same way, added defined class "particle entity descriptor", "granule entity descriptor", "powder entity descriptor" - added an "amorphous entity quality" 
+Adding crystal structural properties. Inspiration from CCDC database. Considering adding "crystal cell lengths descriptor" , "crystal cell angles descriptor", "crystal spacegroup symbol descriptor", "crystal symetry operators descriptor", "crystal symmetry rotation descriptor", "crystal symmetry translation descriptor". Incorporated "cartesian spatial coordinate datum" from IAO. TO include descriptor related to crystal entity added defined class "crystal entity descriptor" (chemical descriptor and is about crystal entity). Same way, added defined class "particle entity descriptor", "granule entity descriptor", "powder entity descriptor" - added an "amorphous entity quality"
+
+
+#######
+#ok start work on pharmaceutical manufacturing
+Everything subclass of "material processing" ? They have input and output
+Created high-level class "Drug Formulation Process and subclasses" (inspired by NCI thesaurus) 
+Created other sub-classes inspired by NCI Thesaurus:
+	-Granulation and sub-classes
+	-Particle_sizing and sub-classes
+	-Mixing and sub-classes
+	-Filtration and sub-classes
+	-
+Modification of the classes: created one class for unit operation and one class for overall pharmaceutical processes
+
+ 
