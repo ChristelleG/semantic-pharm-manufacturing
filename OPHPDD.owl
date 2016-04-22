@@ -9100,6 +9100,12 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000094"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000155"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -9117,7 +9123,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
                 <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000001"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>The different manufacturing routes available to manufacture a pharmaceuitcal dosage form</obo:IAO_0000115>
+        <obo:IAO_0000115>The different manufacturing routes available to manufacture a pharmaceutical dosage form</obo:IAO_0000115>
         <rdfs:label xml:lang="en">pharmaceutical processing routes</rdfs:label>
     </owl:Class>
     

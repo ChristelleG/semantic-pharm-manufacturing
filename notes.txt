@@ -53,11 +53,15 @@ Created other sub-classes inspired by NCI Thesaurus:
 	-Mixing and sub-classes
 	-Filtration and sub-classes
 	-
-Modification of the classes: created one class for unit operation and one class for overall pharmaceutical manufacturing processes
+Modification of the classes: created one class for unit operation: "pharmaceutical process unit operation" and one class for overall pharmaceutical manufacturing processes: "pharmaceutical processing routes".
+
+Class "pharmaceutical processing routes" has part some "pharmaceutical process unit operation", has specified input some "active pharmaceutical ingredient" and "pharmaceutical excipient" , has specified output some "pharmaceutical dosage form"
 
 created a class pharmaceutical unit operation equipement and added some subclasses
 
- each unit operation has participant a unit operation equipment
+each unit operation has participant a unit operation equipment
+
+
 
 imported "setting datum" from IAO to be able to describe the process parameters and imported "equipment specification datum" from CHMO to describe equipement parameters
 
