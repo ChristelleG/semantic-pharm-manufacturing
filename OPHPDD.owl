@@ -1121,6 +1121,19 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHMO_0002761 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHMO_0002761">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A data item that describes a non-adjustable specification of a piece of equipment.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://rsc-cmo.googlecode.com/svn/trunk/chmo.owl"/>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHMO:0002761</oboInOwl:id>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Example: the length of a chromatography column as ordered from a supplier or indeed a glassblower. To be distinguished from a &apos;setting datum&apos;, IAO:0000140, which I take to be an adjustable parameter. Placeholder for now.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">equipment specification datum</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/DRON_00000001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DRON_00000001">
@@ -1434,6 +1447,19 @@
         <obo:IAO_0000119 xml:lang="en">OBI_0000344</obo:IAO_0000119>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
         <rdfs:label xml:lang="en">plan specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000140 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000140">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A settings datum is a datum that denotes some configuration of an instrument.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Alan grouped these in placeholder for the moment. Name by analogy to measurement datum.</obo:IAO_0000116>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:label xml:lang="en">setting datum</rdfs:label>
     </owl:Class>
     
 
@@ -8882,7 +8908,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000076 -->
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000076">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -8918,7 +8944,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000077 -->
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000077">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
         <rdfs:label xml:lang="en">pharmaceutical ingredient specification</rdfs:label>
     </owl:Class>
     
@@ -8957,7 +8983,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000080 -->
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000080">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
         <rdfs:label xml:lang="en">pharmaceutical manufacturing route specification</rdfs:label>
     </owl:Class>
     
@@ -8966,7 +8992,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000081 -->
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000081">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
         <rdfs:label xml:lang="en">pharmaceutical form specification</rdfs:label>
     </owl:Class>
     
@@ -9091,10 +9117,8 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
                 <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000001"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>From NCI Thesaurus: The act or process of developing or preparing a mixture of ingredients to create a desired end drug product, such as a specific flavor, aroma, or polymer.</obo:IAO_0000115>
-        <obo:IAO_0000119>NCI Thesaurus: C15653</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">pharmaceutical formulation process</rdfs:label>
-        <rdfs:seeAlso>NCI Thesaurus: C15653</rdfs:seeAlso>
+        <obo:IAO_0000115>The different manufacturing routes available to manufacture a pharmaceuitcal dosage form</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">pharmaceutical processing routes</rdfs:label>
     </owl:Class>
     
 
@@ -9413,7 +9437,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000090"/>
         <obo:IAO_0000115>From NCI Thesaurus: A process that forms a solid dosage unit by applying mechanical forces to bind the formulation</obo:IAO_0000115>
         <obo:IAO_0000119>NCI Thesaurus: C112968</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">direct compression formulation process</rdfs:label>
+        <rdfs:label xml:lang="en">direct compression manufacturing process</rdfs:label>
         <rdfs:seeAlso>NCI Thesaurus: C112968</rdfs:seeAlso>
     </owl:Class>
     
@@ -9425,7 +9449,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000090"/>
         <obo:IAO_0000115>From NCI Thesaurus: A process that forms a solid dosage unit by continuously cutting a uniform material into equally sized segments</obo:IAO_0000115>
         <obo:IAO_0000119>NCI Thesaurus: C112969</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">die cutting formulation process</rdfs:label>
+        <rdfs:label xml:lang="en">die cutting manufacturing process</rdfs:label>
         <rdfs:seeAlso>NCI Thesaurus: C112969</rdfs:seeAlso>
     </owl:Class>
     
@@ -9437,7 +9461,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000155"/>
         <obo:IAO_0000115>A process that removes water or volatile solvents from a bed of solids</obo:IAO_0000115>
         <obo:IAO_0000119>NCI Thesaurus: C112923</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">drying method</rdfs:label>
+        <rdfs:label xml:lang="en">drying</rdfs:label>
         <rdfs:seeAlso>NCI Thesaurus: C112923</rdfs:seeAlso>
     </owl:Class>
     
@@ -9449,7 +9473,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000155"/>
         <obo:IAO_0000115>From NCI Thesaurus: A process that fills a dosage unit</obo:IAO_0000115>
         <obo:IAO_0000119>NCI Thesaurus: C112924</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">filling method</rdfs:label>
+        <rdfs:label xml:lang="en">filling</rdfs:label>
         <rdfs:seeAlso>NCI Thesaurus: C112924</rdfs:seeAlso>
     </owl:Class>
     
@@ -9461,7 +9485,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000153"/>
         <obo:IAO_0000115>From NCI Thesaurus: A method that suspends a substrate in a fluidized bed while it is sprayed with a layer of coating material</obo:IAO_0000115>
         <obo:IAO_0000119>NCI Thesaurus: C112971</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">fluidized bed coating method</rdfs:label>
+        <rdfs:label xml:lang="en">fluidized bed coating</rdfs:label>
         <rdfs:seeAlso>NCI Thesaurus: C112971</rdfs:seeAlso>
     </owl:Class>
     
@@ -9473,7 +9497,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000090"/>
         <obo:IAO_0000115>From NCI Thesaurus: A process that forms a solid dosage unit consisting of discrete layers that are bound together</obo:IAO_0000115>
         <obo:IAO_0000119>NCI Thesaurus: C112972</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">lamination formulation process</rdfs:label>
+        <rdfs:label xml:lang="en">lamination manufacturing process</rdfs:label>
         <rdfs:seeAlso>NCI Thesaurus: C112972</rdfs:seeAlso>
     </owl:Class>
     
@@ -9485,7 +9509,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000090"/>
         <obo:IAO_0000115>From NCI Thesaurus: A process that uses a laser to drill holes in a tablet</obo:IAO_0000115>
         <obo:IAO_0000119>NCI Thesaurus: C112973</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">laser drill formulation process</rdfs:label>
+        <rdfs:label xml:lang="en">laser drill manufacturing process</rdfs:label>
         <rdfs:seeAlso>NCI Thesaurus: C112973</rdfs:seeAlso>
     </owl:Class>
     
@@ -9497,7 +9521,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000090"/>
         <obo:IAO_0000115>From NCI Thesaurus: A process that forms a solid dosage unit by pouring or casting a melted agent into a prefabricated form</obo:IAO_0000115>
         <obo:IAO_0000119>NCI Thesaurus: C112974</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">molded formulation process</rdfs:label>
+        <rdfs:label xml:lang="en">molded manufacturing process</rdfs:label>
         <rdfs:seeAlso>NCI Thesaurus: C112974</rdfs:seeAlso>
     </owl:Class>
     
@@ -9521,7 +9545,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000153"/>
         <obo:IAO_0000115>From NCI Thesaurus: A method that agitates a substrate in a rotating pan while it is sprayed with a layer of coating material</obo:IAO_0000115>
         <obo:IAO_0000119>NCI Thesaurus: C112976</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">rotating pan coating method</rdfs:label>
+        <rdfs:label xml:lang="en">rotating pan coating</rdfs:label>
         <rdfs:seeAlso>NCI Thesaurus: C112976</rdfs:seeAlso>
     </owl:Class>
     
@@ -9533,20 +9557,8 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000153"/>
         <obo:IAO_0000115>From NCI Thesaurus: A method that condenses a vaporized coating material onto a substrate</obo:IAO_0000115>
         <obo:IAO_0000119>NCI Thesaurus: C112977</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">vapor disposition coating method</rdfs:label>
+        <rdfs:label xml:lang="en">vapor disposition coating</rdfs:label>
         <rdfs:seeAlso>NCI Thesaurus: C112977</rdfs:seeAlso>
-    </owl:Class>
-    
-
-
-    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000132 -->
-
-    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000132">
-        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000123"/>
-        <obo:IAO_0000115>From NCI Thesaurus: a process that is not otherwise specified, which removes water or a volatile solvent by evaporation</obo:IAO_0000115>
-        <obo:IAO_0000119>NCI Thesaurus: C112978</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">drying method, not otherwise specified</rdfs:label>
-        <rdfs:seeAlso>NCI Thesaurus: C112978</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -9557,7 +9569,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000123"/>
         <obo:IAO_0000115>From NCI Thesaurus: A process that removes water or volatile solvents from a bed of solids by relying on absorption of heat radiation by those solvents</obo:IAO_0000115>
         <obo:IAO_0000119>NCI Thesaurus: C112979</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">flash drying method</rdfs:label>
+        <rdfs:label xml:lang="en">flash drying</rdfs:label>
         <rdfs:seeAlso>NCI Thesaurus: C112979</rdfs:seeAlso>
     </owl:Class>
     
@@ -9569,7 +9581,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000123"/>
         <obo:IAO_0000115>A process that removes water or volatile solvents using large volumes of hot air to suspend a bed of solids</obo:IAO_0000115>
         <obo:IAO_0000119>NCI Thesaurus: C112980</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">fluid bed drying method</rdfs:label>
+        <rdfs:label xml:lang="en">fluid bed drying</rdfs:label>
         <rdfs:seeAlso>NCI Thesaurus: C112980</rdfs:seeAlso>
     </owl:Class>
     
@@ -9581,7 +9593,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000123"/>
         <obo:IAO_0000115>From NCI Thesaurus: A process that removes water or volatile solvents from an agitated or tumbling bed of solids by relying on heat transfer from the equipment surface or a hot gas to the solid sample</obo:IAO_0000115>
         <obo:IAO_0000119>NCI Thesaurus: C112981</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">moving bed drying method</rdfs:label>
+        <rdfs:label xml:lang="en">moving bed drying</rdfs:label>
         <rdfs:seeAlso>NCI Thesaurus: C112981</rdfs:seeAlso>
     </owl:Class>
     
@@ -9593,7 +9605,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000123"/>
         <obo:IAO_0000115>From NCI Thesaurus: A process that removes water or volatile solvents from a bed of solids by relying on absorption of heat radiation by those solvents</obo:IAO_0000115>
         <obo:IAO_0000119>NCI Thesaurus: C112982</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">radiant heating drying method</rdfs:label>
+        <rdfs:label xml:lang="en">radiant heating drying</rdfs:label>
         <rdfs:seeAlso>NCI Thesaurus: C112982</rdfs:seeAlso>
     </owl:Class>
     
@@ -9605,7 +9617,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000123"/>
         <obo:IAO_0000115>A process that removes water or volatile solvents from a bed of solids or a slurry using a large volumetric flow of hot air</obo:IAO_0000115>
         <obo:IAO_0000119>NCI Thesaurus: C112983</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">spray heating drying method</rdfs:label>
+        <rdfs:label xml:lang="en">spray heating drying</rdfs:label>
         <rdfs:seeAlso>NCI Thesaurus: C112983</rdfs:seeAlso>
     </owl:Class>
     
@@ -9617,7 +9629,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000123"/>
         <obo:IAO_0000115>From NCI Thesaurus: A process that removes water or volatile solvents from a bed of solids by relying on heat transfer from the equipment surface or a hot gas to the solid sample</obo:IAO_0000115>
         <obo:IAO_0000119>NCI Thesaurus: C112984</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">stationary bed heating drying method</rdfs:label>
+        <rdfs:label xml:lang="en">stationary bed heating drying</rdfs:label>
         <rdfs:seeAlso>NCI Thesaurus: C112984</rdfs:seeAlso>
     </owl:Class>
     
@@ -9629,7 +9641,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000124"/>
         <obo:IAO_0000115>A process that fills a dosage unit with a liquid, which is performed in a closed environment under sterile conditions and without human intervention</obo:IAO_0000115>
         <obo:IAO_0000119>NCI Thesaurus: C112986</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">isolated aseptic liquid filling method</rdfs:label>
+        <rdfs:label xml:lang="en">isolated aseptic liquid filling</rdfs:label>
         <rdfs:seeAlso>NCI Thesaurus: C112986</rdfs:seeAlso>
     </owl:Class>
     
@@ -9641,20 +9653,8 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000124"/>
         <obo:IAO_0000115>A process that fills a dosage unit with a powder, which is performed in a closed environment under sterile conditions and without human intervention</obo:IAO_0000115>
         <obo:IAO_0000115>NCI Thesaurus: C112987</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">isolated aseptic powder filling method</rdfs:label>
+        <rdfs:label xml:lang="en">isolated aseptic powder filling</rdfs:label>
         <rdfs:seeAlso>NCI Thesaurus: C112987</rdfs:seeAlso>
-    </owl:Class>
-    
-
-
-    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000141 -->
-
-    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000141">
-        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000124"/>
-        <obo:IAO_0000115>From NCI Thesaurus: A process that fills a dosage unit with a liquid in a method not otherwise specified</obo:IAO_0000115>
-        <obo:IAO_0000119>NCI Thesaurus: C112988</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">liquid filling method, not otherwise specified</rdfs:label>
-        <rdfs:seeAlso>NCI Thesaurus: C112988</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -9665,7 +9665,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000124"/>
         <obo:IAO_0000115>From NCI Thesaurus: A process that fills a dosage unit with a liquid, which is performed under sterile conditions and is likely to involve human intervention</obo:IAO_0000115>
         <obo:IAO_0000119>NCI Thesaurus: C112989</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">manual aseptic liquid filling method</rdfs:label>
+        <rdfs:label xml:lang="en">manual aseptic liquid filling</rdfs:label>
         <rdfs:seeAlso>NCI Thesaurus: C112989</rdfs:seeAlso>
     </owl:Class>
     
@@ -9677,7 +9677,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000124"/>
         <obo:IAO_0000115>From NCI Thesaurus: A process that fills a dosage unit with a powder, which is performed under sterile conditions and is likely to involve human intervention</obo:IAO_0000115>
         <obo:IAO_0000119>NCI Thesaurus: C112990</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">manual aseptic powder filling method</rdfs:label>
+        <rdfs:label xml:lang="en">manual aseptic powder filling</rdfs:label>
         <rdfs:seeAlso>NCI Thesaurus: C112990</rdfs:seeAlso>
     </owl:Class>
     
@@ -9689,7 +9689,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000124"/>
         <obo:IAO_0000115>From NCI Thesaurus: A process that fills a dosage unit using an augur to deliver the powder, which is not performed under sterile conditions</obo:IAO_0000115>
         <obo:IAO_0000119>NCI Thesaurus: C112991</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">non-sterile augur powder filling method</rdfs:label>
+        <rdfs:label xml:lang="en">non-sterile augur powder filling</rdfs:label>
         <rdfs:seeAlso>NCI Thesaurus: C112991</rdfs:seeAlso>
     </owl:Class>
     
@@ -9701,7 +9701,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000124"/>
         <obo:IAO_0000115>From NCI Thesaurus: A process that fills a dosage unit using a dosing disk to deliver the powder, which is not performed under sterile conditions</obo:IAO_0000115>
         <obo:IAO_0000119>NCI Thesaurus: C112992</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">non-sterile dosing disk powder filling method</rdfs:label>
+        <rdfs:label xml:lang="en">non-sterile dosing disk powder filling</rdfs:label>
         <rdfs:seeAlso>NCI Thesaurus: C112992</rdfs:seeAlso>
     </owl:Class>
     
@@ -9713,7 +9713,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000124"/>
         <obo:IAO_0000115>From NCI Thesaurus: A process that fills a container with a purified medical gas, which is not performed under sterile conditions</obo:IAO_0000115>
         <obo:IAO_0000119>NCI Thesaurus: C112993</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">non-sterile medical gas filling method</rdfs:label>
+        <rdfs:label xml:lang="en">non-sterile medical gas filling</rdfs:label>
         <rdfs:seeAlso>NCI Thesaurus: C112993</rdfs:seeAlso>
     </owl:Class>
     
@@ -9725,7 +9725,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000124"/>
         <obo:IAO_0000115>From NCI Thesaurus: A process that fills a dosage unit using a piston to deliver the powder, which is not performed under sterile conditions</obo:IAO_0000115>
         <obo:IAO_0000119>NCI Thesaurus: C112994</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">non-sterile piston powder filling method</rdfs:label>
+        <rdfs:label xml:lang="en">non-sterile piston powder filling</rdfs:label>
         <rdfs:seeAlso>NCI Thesaurus: C112994</rdfs:seeAlso>
     </owl:Class>
     
@@ -9737,7 +9737,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000124"/>
         <obo:IAO_0000115>From NCI Thesaurus: A process that fills a dosage unit using a vacuum to deliver a powder, which is not performed under sterile conditions</obo:IAO_0000115>
         <obo:IAO_0000119>NCI Thesaurus: C112995</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">non-sterile vacuum powder filling method</rdfs:label>
+        <rdfs:label xml:lang="en">non-sterile vacuum powder filling</rdfs:label>
         <rdfs:seeAlso>NCI Thesaurus: C112995</rdfs:seeAlso>
     </owl:Class>
     
@@ -9749,7 +9749,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000124"/>
         <obo:IAO_0000115>From NCI Thesaurus: A process that fills a dosage unit using a vibrating perforated plate to deliver a powder, which is not performed under sterile conditions</obo:IAO_0000115>
         <obo:IAO_0000119>NCI Thesaurus: C112996</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">non-sterile vibratory powder filling method</rdfs:label>
+        <rdfs:label xml:lang="en">non-sterile vibratory powder filling</rdfs:label>
         <rdfs:seeAlso>NCI Thesaurus: C112996</rdfs:seeAlso>
     </owl:Class>
     
@@ -9761,20 +9761,8 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000124"/>
         <obo:IAO_0000115>From NCI Thesaurus: A process that fills a dosage unit with a powder by volume using gravity flow, which is not performed under sterile conditions</obo:IAO_0000115>
         <obo:IAO_0000119>NCI Thesaurus: C112997</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">non-sterile volumetric powder filling method</rdfs:label>
+        <rdfs:label xml:lang="en">non-sterile volumetric powder filling</rdfs:label>
         <rdfs:seeAlso>NCI Thesaurus: C112997</rdfs:seeAlso>
-    </owl:Class>
-    
-
-
-    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000151 -->
-
-    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000151">
-        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000124"/>
-        <obo:IAO_0000115>From NCI Thesaurus: A process that fills a dosage unit with a powder in a method not otherwise specified</obo:IAO_0000115>
-        <obo:IAO_0000119>NCI Thesaurus: C112998</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">powder filling method, not otherwise specified</rdfs:label>
-        <rdfs:seeAlso>NCI Thesaurus: C112998</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -9785,7 +9773,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000124"/>
         <obo:IAO_0000115>From NCI Thesaurus: A process that fills a dosage unit with a pressurized liquid, which is not performed under sterile conditions</obo:IAO_0000115>
         <obo:IAO_0000119>NCI Thesaurus: C112999</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">pressurized liquid filling method</rdfs:label>
+        <rdfs:label xml:lang="en">pressurized liquid filling</rdfs:label>
         <rdfs:seeAlso>NCI Thesaurus: C112999</rdfs:seeAlso>
     </owl:Class>
     
@@ -9830,7 +9818,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000156">
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000090"/>
-        <rdfs:label xml:lang="en">dry granulation formulation process</rdfs:label>
+        <rdfs:label xml:lang="en">dry granulation manufacturing process</rdfs:label>
     </owl:Class>
     
 
@@ -9839,7 +9827,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000157">
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000090"/>
-        <rdfs:label xml:lang="en">wet granulation formulation process</rdfs:label>
+        <rdfs:label xml:lang="en">wet granulation manufacturing process</rdfs:label>
     </owl:Class>
     
 
@@ -9892,6 +9880,123 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000162">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
         <rdfs:label xml:lang="en">pharmaceutical unit operation equipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000163 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000163">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000162"/>
+        <rdfs:label xml:lang="en">blender</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000165 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000165">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000162"/>
+        <rdfs:label xml:lang="en">granulator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000166 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000166">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000162"/>
+        <rdfs:label xml:lang="en">blister packing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000167 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000167">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000162"/>
+        <rdfs:label xml:lang="en">reactor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000168 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000168">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000162"/>
+        <rdfs:label xml:lang="en">container</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000169 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000169">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000162"/>
+        <rdfs:label xml:lang="en">mixer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000170 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000170">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000162"/>
+        <rdfs:label xml:lang="en">capsule filler</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000171 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000171">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000162"/>
+        <rdfs:label xml:lang="en">tablet and capsules printer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000172 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000172">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000162"/>
+        <rdfs:label xml:lang="en">dryer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000173 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000173">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000162"/>
+        <rdfs:label xml:lang="en">coating machine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000174 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000174">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000162"/>
+        <rdfs:label xml:lang="en">tablet press</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000175 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000175">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000162"/>
+        <rdfs:label xml:lang="en">compaction machine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000176 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000176">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000162"/>
+        <rdfs:label xml:lang="en">screening machine</rdfs:label>
     </owl:Class>
     
 
@@ -9994,37 +10099,6 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
             <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000087"/>
             <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000110"/>
             <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000116"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000132"/>
-            <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000133"/>
-            <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000134"/>
-            <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000135"/>
-            <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000136"/>
-            <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000137"/>
-            <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000138"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000139"/>
-            <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000140"/>
-            <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000141"/>
-            <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000142"/>
-            <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000143"/>
-            <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000144"/>
-            <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000145"/>
-            <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000146"/>
-            <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000147"/>
-            <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000148"/>
-            <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000149"/>
-            <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000150"/>
-            <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000151"/>
-            <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000152"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
