@@ -11,8 +11,8 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="872.00018"
-   height="294.38715"
+   width="1589.2203"
+   height="536.52057"
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
@@ -915,8 +915,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="247.50495"
-     inkscape:cy="-79.43725"
+     inkscape:cx="606.11503"
+     inkscape:cy="41.630311"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -933,7 +933,7 @@
      fit-margin-bottom="0">
     <sodipodi:guide
        orientation="0,1"
-       position="321.14333,532.88592"
+       position="679.75341,653.95348"
        id="guide7094" />
   </sodipodi:namedview>
   <metadata
@@ -952,7 +952,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-104.13089,-367.5816)"
+     transform="translate(254.47919,-246.51573)"
      style="display:inline">
     <flowRoot
        xml:space="preserve"
