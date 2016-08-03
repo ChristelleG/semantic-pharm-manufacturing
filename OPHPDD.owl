@@ -1144,16 +1144,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/DRON_00000030 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DRON_00000030">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
-        <obo:IAO_0000115>a role borne by a scattered molecular aggregate and realized by its grains participating in one or more processes</obo:IAO_0000115>
-        <rdfs:label>role of scattered molecular aggregate</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000001">
@@ -1775,41 +1765,6 @@
         <obo:IAO_0000119 xml:lang="en">OBI branch derived</obo:IAO_0000119>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
         <rdfs:label xml:lang="en">material processing</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBI_0000576 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000576">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
-                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000101"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000039"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000039"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000111 xml:lang="en">scattered molecular aggregate</obo:IAO_0000111>
-        <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the sodium and chloride ions in a glass of salt water</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">a material entity that consists of all the molecules of a specific type that are located in some bounded region and which is part of a more massive material entity that has parts that are other such aggregates</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
-        <obo:IAO_0000118 xml:lang="en">Collective</obo:IAO_0000118>
-        <obo:IAO_0000119 xml:lang="en">Discussion in Karslruhe with, among others, Alan Rector, Stefan Schulz, Marijke Keet, Melanie Courtot, and Alan Ruttenberg. With inspiration from the paper Granularity, scale and collectivity: When size does and does not matter, Alan Recto, Jeremy Rogers, Thomas Bittner, Journal of Biomedical Informatics 39 (2006) 333-349</obo:IAO_0000119>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
-        <rdfs:label xml:lang="en">scattered molecular aggregate</rdfs:label>
     </owl:Class>
     
 
@@ -8214,6 +8169,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000017">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000047"/>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000075"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
@@ -8272,7 +8228,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000576"/>
+                    <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000075"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
                         <owl:allValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000045"/>
@@ -8293,7 +8249,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000576"/>
+                    <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000075"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
                         <owl:allValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046"/>
@@ -8315,6 +8271,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000021">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000047"/>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000075"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
@@ -8344,6 +8301,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000022">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000047"/>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000075"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
@@ -8556,10 +8514,10 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000045 -->
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000045">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DRON_00000030"/>
-        <obo:IAO_0000115>a role of a scattered molecular aggregate that is part of a pharmaceutical dosage form that is realized by (1) administration of the drug to an organism followed by (2) some change in the structure or functioning of some part of the organism</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000102"/>
+        <obo:IAO_0000115>a role of a molecular aggregate that is part of a pharmaceutical dosage form that is realized by (1) administration of the drug to an organism followed by (2) some change in the structure or functioning of some part of the organism</obo:IAO_0000115>
         <obo:IAO_0000119>DRON:00000028</obo:IAO_0000119>
-        <oboInOwl:hasExactSynonym>DRON:00000028</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>DRON:00000028</oboInOwl:hasRelatedSynonym>
         <rdfs:label xml:lang="en">active ingredient role</rdfs:label>
     </owl:Class>
     
@@ -8568,10 +8526,10 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046 -->
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000046">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DRON_00000030"/>
-        <obo:IAO_0000115>a role of a scattered molecular aggregate that is part of a pharmaceutical dosage form that is realized by facilitating administration or manufacture, improving product delivery, promoting the consistent release and bioavailability of the drug, enhancing stability, assisting in product identification, or enhancing other product characteristics</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000102"/>
+        <obo:IAO_0000115>a role of a molecular aggregate that is part of a pharmaceutical dosage form that is realized by facilitating administration or manufacture, improving product delivery, promoting the consistent release and bioavailability of the drug, enhancing stability, assisting in product identification, or enhancing other product characteristics</obo:IAO_0000115>
         <obo:IAO_0000119>Define by C.Gendrin with Inspiration from DRON and NCI Thesaurus</obo:IAO_0000119>
-        <oboInOwl:hasExactSynonym>DRON:00000029</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>DRON:00000029</oboInOwl:hasRelatedSynonym>
         <rdfs:label xml:lang="en">excipient role</rdfs:label>
     </owl:Class>
     
@@ -8901,6 +8859,34 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">microcrystalline cellulose particleA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000075 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000075">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/CHEMINF_000101"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000039"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000039"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>a material entity that consists of all the molecules of a specific type that are located in some bounded region</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">molecular aggregate</rdfs:label>
     </owl:Class>
     
 
@@ -9255,6 +9241,16 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000155"/>
         <obo:IAO_0000115>A process that forms something into grains (Inspired by NCI Thesaurus C112925)</obo:IAO_0000115>
         <rdfs:label xml:lang="en">granulation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000102 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000102">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <obo:IAO_0000115>a role borne by a molecular aggregate and realized by its grains participating in one or more processes</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">role of molecular aggregate</rdfs:label>
     </owl:Class>
     
 
