@@ -8404,7 +8404,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000028 -->
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000028">
-        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000086"/>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000101"/>
         <rdfs:label xml:lang="en">amorphous entity quality</rdfs:label>
     </owl:Class>
     
@@ -8422,7 +8422,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000031 -->
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000031">
-        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000086"/>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000101"/>
         <rdfs:label xml:lang="en">crystal entity quality</rdfs:label>
     </owl:Class>
     
@@ -8431,7 +8431,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000032 -->
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000032">
-        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000086"/>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000101"/>
         <rdfs:label xml:lang="en">powder entity quality</rdfs:label>
     </owl:Class>
     
@@ -8440,7 +8440,7 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000033 -->
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/OPHPDD_0000033">
-        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000086"/>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000101"/>
         <rdfs:label xml:lang="en">particle entity quality</rdfs:label>
     </owl:Class>
     
