@@ -10003,6 +10003,33 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
     
 
 
+    <!-- http://www.ODDoPT.com/ontologies/ODDoPT.owl/ODDoPT_0000178 -->
+
+    <owl:Class rdf:about="http://www.ODDoPT.com/ontologies/ODDoPT.owl/ODDoPT_0000178">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000464"/>
+        <rdfs:label xml:lang="en">ADDoPT identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ODDoPT.com/ontologies/ODDoPT.owl/ODDoPT_0000179 -->
+
+    <owl:Class rdf:about="http://www.ODDoPT.com/ontologies/ODDoPT.owl/ODDoPT_0000179">
+        <rdfs:subClassOf rdf:resource="http://www.ODDoPT.com/ontologies/ODDoPT.owl/ODDoPT_0000178"/>
+        <rdfs:label xml:lang="en">ADDoPT molecular identifier (MOL_ID)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ODDoPT.com/ontologies/ODDoPT.owl/ODDoPT_0000180 -->
+
+    <owl:Class rdf:about="http://www.ODDoPT.com/ontologies/ODDoPT.owl/ODDoPT_0000180">
+        <rdfs:subClassOf rdf:resource="http://www.ODDoPT.com/ontologies/ODDoPT.owl/ODDoPT_0000178"/>
+        <rdfs:label xml:lang="en">ADDoPT crystal identifier (CRYS_ID)</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
