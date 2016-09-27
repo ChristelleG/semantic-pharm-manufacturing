@@ -15156,6 +15156,16 @@ http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3524573/</rdfs:comment>
     
 
 
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000025"/>
+        <rdfs:comment>The enthalpy of sublimation, or heat of sublimation, is the heat required to change one mole of a substance from solid state to gaseous state at a given combination of temperature and pressure (source: wikipedia)</rdfs:comment>
+        <rdfs:label xml:lang="en">enthalpy of sublimation descriptor</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
