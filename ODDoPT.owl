@@ -15181,6 +15181,25 @@ http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3524573/</rdfs:comment>
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185">
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000200"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000188"/>
+                            <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000189"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000221"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000111"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>The enthalpy of sublimation, or heat of sublimation, is the heat required to change one mole of a substance from solid state to gaseous state at a given combination of temperature and pressure (source: wikipedia). Can be measured or predicted.</dc:description>
         <rdfs:label xml:lang="en">enthalpy of sublimation descriptor</rdfs:label>
     </owl:Class>
@@ -15192,6 +15211,275 @@ http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3524573/</rdfs:comment>
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000186">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UO_0000111"/>
         <rdfs:label xml:lang="en">kiloJoule per mole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000187 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000187">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185"/>
+        <rdfs:comment>Enthalpy of sublimation derived at the mean temperature Tm of the experimental range of a Knudsen mass-loss effusion technique.
+During a Knudsen mass-loss effusion experiment, vapour pressure is measured as a function of temperature.</rdfs:comment>
+        <rdfs:comment>NIST code: ME</rdfs:comment>
+        <rdfs:label xml:lang="en">enthalpy of sublimation derived from a Mass effusion-Knudsen effusion experiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000188 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000188">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000140"/>
+        <rdfs:label xml:lang="en">Temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000189 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000189">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000140"/>
+        <rdfs:label xml:lang="en">Temperature Range</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000194 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000194">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185"/>
+        <rdfs:comment>NIST code: A</rdfs:comment>
+        <rdfs:label xml:lang="en">enthalpy of sublimation calculated from the vapor pressure data reported by the method of least squares</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000195 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000195">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000140"/>
+        <rdfs:label xml:lang="en">Standard Temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000198 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000198">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185"/>
+        <rdfs:comment>NIST code: BG</rdfs:comment>
+        <rdfs:label xml:lang="en">enthalpy of sublimation derived from Bourdon Gauge experiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000200 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000200">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185"/>
+        <rdfs:comment>NIST code: C</rdfs:comment>
+        <rdfs:label xml:lang="en">enthalpy of sublimation derived from Calorimetry measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000201 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000201">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185"/>
+        <rdfs:comment>NIST code: DM</rdfs:comment>
+        <rdfs:label xml:lang="en">enthalpy of sublimation derived from Diaphragm Manometer experiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000202 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000202">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185"/>
+        <rdfs:comment>NIST code: DSC</rdfs:comment>
+        <rdfs:label xml:lang="en">enthalpy of sublimation derived from a Differential Scanning Calorimetry experiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000203 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000203">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185"/>
+        <rdfs:comment>NIST code: E</rdfs:comment>
+        <rdfs:label xml:lang="en">enthalpy of sublimation estimated</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000204 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000204">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185"/>
+        <rdfs:comment>NIST code: Fus+Vap</rdfs:comment>
+        <rdfs:label xml:lang="en">enthalpy of sublimation calculated using the enthalpies of vaporization and fusion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000205 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000205">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185"/>
+        <rdfs:comment>NIST code: GS</rdfs:comment>
+        <rdfs:label xml:lang="en">enthalpy of sublimation derived by Gas saturation, transpiration experiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000206 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000206">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185"/>
+        <rdfs:comment>NIST code: HSA</rdfs:comment>
+        <rdfs:label xml:lang="en">enthalpy of sublimation derived by Head Space Analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000207 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000207">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185"/>
+        <rdfs:comment>NIST code: I</rdfs:comment>
+        <rdfs:label xml:lang="en">enthalpy of sublimation derived by Isoteniscope experiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000208 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000208">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185"/>
+        <rdfs:comment>NIST code: LE</rdfs:comment>
+        <rdfs:label xml:lang="en">enthalpy of sublimation derived by Langmuir Evaporation experiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000209 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000209">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185"/>
+        <rdfs:comment>NIST code: MG</rdfs:comment>
+        <rdfs:label xml:lang="en">enthalpy of sublimation derived by McLeod Gauge experiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000210 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000210">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185"/>
+        <rdfs:comment>NIST code: MS</rdfs:comment>
+        <rdfs:label xml:lang="en">enthalpy of sublimation derived by Mass Spectrosocopy experiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000211 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000211">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185"/>
+        <rdfs:comment>NIST code: QF</rdfs:comment>
+        <rdfs:label xml:lang="en">enthalpy of sublimation derived by Quartz Fiber experiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000212 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000212">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185"/>
+        <rdfs:comment>NIST code: QR</rdfs:comment>
+        <rdfs:label xml:lang="en">enthalpy of sublimation derived by Quartz Resonator experiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000213 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000213">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185"/>
+        <rdfs:comment>NIST code: SG</rdfs:comment>
+        <rdfs:label xml:lang="en">enthalpy of sublimation derived by Spoon Gauge experiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000214 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000214">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185"/>
+        <rdfs:comment>NIST code: B</rdfs:comment>
+        <rdfs:label xml:lang="en">enthalpy of sublimation calculated from the sum of the enthalpies of vaporization at temperature T, and fusion at the melting point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000215 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000215">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185"/>
+        <rdfs:comment>NIST code: T</rdfs:comment>
+        <rdfs:label xml:lang="en">enthalpy of sublimation derived by Tensimeter experiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000216 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000216">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185"/>
+        <rdfs:comment>NIST code: TCM</rdfs:comment>
+        <rdfs:label xml:lang="en">enthalpy of sublimation derived by Thermal Conductivity Manometer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000217 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000217">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185"/>
+        <rdfs:comment>NIST code: TE</rdfs:comment>
+        <rdfs:label xml:lang="en">enthalpy of sublimation derived by Torsion Effusion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000218 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000218">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185"/>
+        <rdfs:comment>NIST code: TGA</rdfs:comment>
+        <rdfs:label xml:lang="en">enthalpy of sublimation derived by Thermal Gravimetric Analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000219 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000219">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185"/>
+        <rdfs:comment>NIST code: UV</rdfs:comment>
+        <rdfs:label xml:lang="en">enthalpy of sublimation derived by UV absorption</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000220 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000220">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185"/>
+        <rdfs:comment>NIST code: V</rdfs:comment>
+        <rdfs:label xml:lang="en">enthalpy of sublimation derived by Vapor pressure</rdfs:label>
     </owl:Class>
     
 
