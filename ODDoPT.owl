@@ -15143,6 +15143,12 @@ It is a processed material with role &apos;clinical drug role&apos;</obo:IAO_000
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000182">
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>categories not yet fixed. We could start with drug bank &quot;groups&quot;:
 Approved — Drug has been approved in at least one country
 Experimental — Drug has been shown experimentally to bind specific proteins in mammals, bacteria, viruses, fungi, or parasites. An experimental drug is not necessarily being formally investigated
@@ -15490,6 +15496,86 @@ During a Knudsen mass-loss effusion experiment, vapour pressure is measured as a
         <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185"/>
         <rdfs:comment>NIST code: AVG</rdfs:comment>
         <rdfs:label xml:lang="en">enthalpy of sublimation calculated by averaging several values</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000222 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000222">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000464"/>
+        <rdfs:label xml:lang="en">CCDC Refcode</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000223 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000223">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://www.ODDoPT.com/ontologies/ODDoPT.owl/ODDoPT_0000017"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Note yet quite define
+Idea is to keep a slot to be able to classify different structure in the CCDC database : ex: hydrates, non hydrates, polymorphic forms, bound donnor/acceptor etc...</rdfs:comment>
+        <rdfs:label xml:lang="en">ADDoPT crystal classification scheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000224 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000224">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:comment>link to the location of a specific file</rdfs:comment>
+        <rdfs:label xml:lang="en">file path</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000225 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000225">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000224"/>
+        <rdfs:label xml:lang="en">path to crystal cif file</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000226 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000226">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://www.ODDoPT.com/ontologies/ODDoPT.owl/ODDoPT_0000017"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The lattice energy of a crystalline solid is usually defined as the energy of formation of the crystal from infinitely-separated ions and as such is invariably negative (wikipedia)</rdfs:comment>
+        <rdfs:label xml:lang="en">lattice energy descriptor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000227 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000227">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000226"/>
+        <rdfs:label xml:lang="en">lattice energy descriptor calculated by DFT using CASTEP version 16.11</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000228 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000228">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000226"/>
+        <rdfs:comment>It is my understanding that there are several Force Field that can be used within visual habit so each force field should have its own class</rdfs:comment>
+        <rdfs:label xml:lang="en">lattice energy descriptor calculated by VisualHabit using FF xyz</rdfs:label>
     </owl:Class>
     
 
