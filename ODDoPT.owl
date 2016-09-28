@@ -15484,6 +15484,16 @@ During a Knudsen mass-loss effusion experiment, vapour pressure is measured as a
     
 
 
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000221 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000221">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185"/>
+        <rdfs:comment>NIST code: AVG</rdfs:comment>
+        <rdfs:label xml:lang="en">enthalpy of sublimation calculated by averaging several values</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
