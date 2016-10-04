@@ -15580,6 +15580,15 @@ Idea is to keep a slot to be able to classify different structure in the CCDC da
     
 
 
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000229 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000229">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000061"/>
+        <rdfs:label xml:lang="en">crystal entity name</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
