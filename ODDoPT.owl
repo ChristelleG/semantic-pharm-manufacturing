@@ -15190,14 +15190,7 @@ http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3524573/</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000200"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000188"/>
-                            <rdf:Description rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000189"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
+                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000188"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -15209,6 +15202,17 @@ http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3524573/</rdfs:comment>
         <dc:description>The enthalpy of sublimation, or heat of sublimation, is the heat required to change one mole of a substance from solid state to gaseous state at a given combination of temperature and pressure (source: wikipedia). Can be measured or predicted.</dc:description>
         <rdfs:label xml:lang="en">enthalpy of sublimation descriptor</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000185"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000188"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>enthalpy of sublimation can be given at standard temperature (298) or be measured at a given temperature range (min temperature/max temperature values) or given temperature</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -15237,16 +15241,13 @@ During a Knudsen mass-loss effusion experiment, vapour pressure is measured as a
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000188">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000140"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000221"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000005"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Temperature</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000189 -->
-
-    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000189">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000140"/>
-        <rdfs:label xml:lang="en">Temperature Range</rdfs:label>
     </owl:Class>
     
 
@@ -15264,7 +15265,7 @@ During a Knudsen mass-loss effusion experiment, vapour pressure is measured as a
     <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000195 -->
 
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000195">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000140"/>
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000188"/>
         <rdfs:label xml:lang="en">Standard Temperature</rdfs:label>
     </owl:Class>
     
@@ -15585,6 +15586,24 @@ Idea is to keep a slot to be able to classify different structure in the CCDC da
     <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000229">
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000061"/>
         <rdfs:label xml:lang="en">crystal entity name</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000230 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000230">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000188"/>
+        <rdfs:label xml:lang="en">Min Temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000231 -->
+
+    <owl:Class rdf:about="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000231">
+        <rdfs:subClassOf rdf:resource="http://www.OPHPDD.com/ontologies/OPHPDD.owl/ODDoPT_0000188"/>
+        <rdfs:label xml:lang="en">Max Temperature</rdfs:label>
     </owl:Class>
     
 
